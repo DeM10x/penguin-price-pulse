@@ -45,14 +45,18 @@ const penguinFeatures = [
   {
     title: "Exclusive casinos Plinko/Pragmatic",
     iframe: (
-      <iframe
-        src="https://my.spline.design/techinspired3dassetsgamepad-xb96cT3J5vaJwiNrTX7rXHPT/"
-        frameBorder="0"
-        width="100%"
-        height="100%"
-        className="rounded-xl w-full h-full"
-        allowFullScreen
-      ></iframe>
+      <div className="flex items-center justify-center w-full h-full">
+        <div className="scale-[.6] origin-center w-full h-full flex items-center justify-center">
+          <iframe
+            src="https://my.spline.design/techinspired3dassetsgamepad-xb96cT3J5vaJwiNrTX7rXHPT/"
+            frameBorder="0"
+            width="100%"
+            height="100%"
+            className="rounded-xl w-full h-full"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
     ),
   },
   // Future features can be added here as more become available
