@@ -45,19 +45,28 @@ const penguinFeatures = [
   {
     title: "Exclusive casinos Plinko/Pragmatic",
     iframe: (
-      <div className="flex items-center justify-center w-full h-full overflow-hidden relative">
+      <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+        {/* 
+          Center iframe absolutely and scale down content. 
+          Make the iframe at least twice as large as the container, 
+          then scale down and center via transform. 
+        */}
         <iframe
           src="https://my.spline.design/techinspired3dassetsgamepad-xb96cT3J5vaJwiNrTX7rXHPT/"
           frameBorder="0"
-          // Increased iframe size, but scale its content down to 0.5 and recenter
+          allowFullScreen
           style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
             width: "200%",
             height: "200%",
-            transform: "scale(0.5)",
-            transformOrigin: "top left"
+            transform: "translate(-50%, -50%) scale(0.5)",
+            transformOrigin: "center center",
+            pointerEvents: "none",
+            borderRadius: "0.75rem", // match rounded-xl
+            background: "#181926",
           }}
-          className="rounded-xl"
-          allowFullScreen
         ></iframe>
       </div>
     ),
