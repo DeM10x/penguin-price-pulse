@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Smartphone, Monitor } from "lucide-react";
 import React from "react";
@@ -107,11 +108,17 @@ const LovableDevicePreview = ({
                   <div className="w-full h-full bg-gray-900 rounded-lg flex items-center justify-center border border-gray-600 overflow-hidden">
                     {previewMode === 'player' ? (
                       <div className="w-[450px] h-[260px] bg-gray-950 rounded-xl flex items-center justify-center shadow-inner border border-gray-800 relative">
+                        {/* Use the newly uploaded image for the desktop preview */}
                         <img 
-                          src="/lovable-uploads/2b1d34a1-ff36-4eeb-b3da-5de6c9994fbf.png"
+                          src="/lovable-uploads/cf8ce5b7-62ef-4158-b5bd-235516417cf3.png"
                           alt="Player Desktop Screenshot"
-                          className="w-full h-full object-contain rounded-lg bg-gray-100/10 shadow-inner"
-                          style={{ objectPosition: "center" }}
+                          className="w-full h-full object-contain rounded-lg bg-gray-100/10 shadow-inner p-4"
+                          style={{
+                            objectPosition: "center",
+                            // The padding above (`p-4`) ensures the image is well centered, 
+                            // and extra space is usable if image not exact aspect ratio.
+                            backgroundColor: "#18181b" // Tailwind gray-950 for extra subtle integration
+                          }}
                         />
                         {/* subtle overlay at the bottom */}
                         <div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-black/30 to-transparent rounded-b-lg pointer-events-none" />
