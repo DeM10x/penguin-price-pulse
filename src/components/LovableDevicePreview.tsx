@@ -13,7 +13,8 @@ const playerSiteUrl = "https://penguinplay.bet";
 const agentSiteUrl = "https://penguinagent.com";
 
 const playerDesktopImage = "/lovable-uploads/aa6c961a-afe8-4759-b3a3-baa7bcc39610.png";
-const playerMobileImage = "/lovable-uploads/38c289a0-a6d9-43b4-92a9-ae7ca3b164c0.png";
+// Update the player's mobile image to the new uploaded image.
+const playerMobileImage = "/lovable-uploads/6e7ee57f-3136-407c-ae81-cee6fc010741.png";
 
 const LovableDevicePreview = ({
   previewMode,
