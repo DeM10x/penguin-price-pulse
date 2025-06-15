@@ -13,6 +13,8 @@ type Props = {
 const playerSiteUrl = "https://penguinplay.bet";
 const agentSiteUrl = "https://penguinagent.com";
 
+const playerDesktopImage = "/lovable-uploads/aa6c961a-afe8-4759-b3a3-baa7bcc39610.png";
+
 const LovableDevicePreview = ({
   previewMode,
   deviceMode,
@@ -25,7 +27,7 @@ const LovableDevicePreview = ({
         See Your Platform in{" "}
         <span className="text-green-400">Action</span>
       </h2>
-      
+
       <div className="bg-gray-800/50 rounded-2xl p-8 backdrop-blur-sm border border-gray-700">
         {/* Toggle Controls */}
         <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
@@ -47,7 +49,7 @@ const LovableDevicePreview = ({
               AGENT SITE
             </Button>
           </div>
-          
+
           <div className="flex bg-gray-700 rounded-lg p-1">
             <Button
               variant={deviceMode === 'mobile' ? 'default' : 'ghost'}
@@ -77,7 +79,6 @@ const LovableDevicePreview = ({
               {/* iPhone 16 Mockup */}
               <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl border-4 border-gray-800">
                 <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-full z-10" />
-                {/* Remove extra padding from the screen and maximize iframe */}
                 <div className="w-full h-full bg-gray-900 rounded-[2.5rem] flex items-center justify-center border border-gray-600 relative overflow-hidden p-0">
                   <div className="w-[240px] h-[528px] bg-gray-950 rounded-[2.1rem] flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden p-0">
                     <iframe
@@ -91,7 +92,6 @@ const LovableDevicePreview = ({
                       }}
                       allow="clipboard-write; fullscreen"
                     />
-                    {/* subtle overlay at the bottom */}
                     <div className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-black/30 to-transparent rounded-b-[2.1rem] pointer-events-none" />
                   </div>
                 </div>
@@ -101,27 +101,36 @@ const LovableDevicePreview = ({
             <div className="relative">
               {/* Laptop Mockup */}
               <div className="relative">
-                {/* Remove all inside paddings and max out iframe */}
                 <div className="w-[500px] h-[320px] bg-black rounded-t-lg shadow-2xl border-2 border-gray-700 p-0 flex items-center justify-center">
                   <div className="w-[454px] h-[262px] bg-gray-950 rounded-xl flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden p-0">
-                    <iframe
-                      src={previewMode === "player" ? playerSiteUrl : agentSiteUrl}
-                      title={previewMode === "player" ? "Player Desktop Site" : "Agent Desktop Site"}
-                      className="w-full h-full rounded-xl bg-transparent"
-                      style={{
-                        border: "none",
-                        objectFit: "cover",
-                        background: "transparent",
-                      }}
-                      allow="clipboard-write; fullscreen"
-                    />
-                    {/* subtle overlay at the bottom */}
+                    {previewMode === "player" ? (
+                      <img
+                        src={playerDesktopImage}
+                        alt="Player Desktop Site"
+                        className="w-full h-full object-contain rounded-xl bg-gray-950"
+                        style={{
+                          // Ensure the image fits in as best as possible with some safe-box
+                          display: "block",
+                          objectFit: "contain"
+                        }}
+                      />
+                    ) : (
+                      <iframe
+                        src={agentSiteUrl}
+                        title="Agent Desktop Site"
+                        className="w-full h-full rounded-xl bg-transparent"
+                        style={{
+                          border: "none",
+                          objectFit: "cover",
+                          background: "transparent",
+                        }}
+                        allow="clipboard-write; fullscreen"
+                      />
+                    )}
                     <div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-black/30 to-transparent rounded-b-xl pointer-events-none" />
                   </div>
                 </div>
-                {/* Laptop base */}
                 <div className="w-[520px] h-4 bg-gray-700 rounded-b-xl mx-auto border-2 border-gray-600 border-t-0"></div>
-                {/* Laptop hinge */}
                 <div className="w-[480px] h-2 bg-gray-600 rounded-b-lg mx-auto"></div>
               </div>
             </div>
@@ -133,3 +142,4 @@ const LovableDevicePreview = ({
 );
 
 export default LovableDevicePreview;
+
