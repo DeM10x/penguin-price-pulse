@@ -5,7 +5,6 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/penguin-price-pulse/',   // 👈 Added this line
   server: {
     host: "::",
     port: 8080,
