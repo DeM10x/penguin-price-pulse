@@ -73,16 +73,24 @@ const LovableDevicePreview = ({
             <div className="relative">
               {/* iPhone 16 Mockup */}
               <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl border-4 border-gray-800">
-                <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-full z-10"></div>
+                <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-full z-10" />
                 {/* Screen */}
                 <div className="w-full h-full bg-gray-900 rounded-[2.5rem] flex items-center justify-center border border-gray-600 relative overflow-hidden">
-                  <div className="text-center z-20">
-                    <div className="text-green-400 text-3xl mb-3">📱</div>
-                    <div className="text-white font-bold text-lg">
-                      {previewMode === 'player' ? 'Player Site' : 'Agent Site'}
+                  {previewMode === 'player' ? (
+                    <img 
+                      src="/lovable-uploads/5fa491f7-a41f-4c2c-b0d6-26549b79b0b4.png" 
+                      alt="Player Mobile Screenshot"
+                      className="w-full h-full object-cover rounded-[2.5rem]"
+                    />
+                  ) : (
+                    <div className="text-center z-20">
+                      <div className="text-green-400 text-3xl mb-3">📱</div>
+                      <div className="text-white font-bold text-lg">
+                        Agent Site
+                      </div>
+                      <div className="text-gray-400 text-sm mt-2">iPhone 16 Preview</div>
                     </div>
-                    <div className="text-gray-400 text-sm mt-2">iPhone 16 Preview</div>
-                  </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -92,14 +100,22 @@ const LovableDevicePreview = ({
               <div className="relative">
                 {/* Screen */}
                 <div className="w-[500px] h-[320px] bg-black rounded-t-lg p-4 shadow-2xl border-2 border-gray-700">
-                  <div className="w-full h-full bg-gray-900 rounded-lg flex items-center justify-center border border-gray-600">
-                    <div className="text-center">
-                      <div className="text-green-400 text-4xl mb-3">💻</div>
-                      <div className="text-white font-bold text-xl">
-                        {previewMode === 'player' ? 'Player Site' : 'Agent Site'}
+                  <div className="w-full h-full bg-gray-900 rounded-lg flex items-center justify-center border border-gray-600 overflow-hidden">
+                    {previewMode === 'player' ? (
+                      <img 
+                        src="/lovable-uploads/2b1d34a1-ff36-4eeb-b3da-5de6c9994fbf.png"
+                        alt="Player Desktop Screenshot"
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                    ) : (
+                      <div className="text-center">
+                        <div className="text-green-400 text-4xl mb-3">💻</div>
+                        <div className="text-white font-bold text-xl">
+                          Agent Site
+                        </div>
+                        <div className="text-gray-400 text-sm mt-2">Laptop Preview</div>
                       </div>
-                      <div className="text-gray-400 text-sm mt-2">Laptop Preview</div>
-                    </div>
+                    )}
                   </div>
                 </div>
                 {/* Laptop base */}
@@ -116,3 +132,4 @@ const LovableDevicePreview = ({
 );
 
 export default LovableDevicePreview;
+
