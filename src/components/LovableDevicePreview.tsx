@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Smartphone, Monitor } from "lucide-react";
 import React from "react";
@@ -13,8 +14,11 @@ const playerSiteUrl = "https://penguinplay.bet";
 const agentSiteUrl = "https://penguinagent.com";
 
 const playerDesktopImage = "/lovable-uploads/aa6c961a-afe8-4759-b3a3-baa7bcc39610.png";
-// Update the player's mobile image to the new uploaded image.
 const playerMobileImage = "/lovable-uploads/6e7ee57f-3136-407c-ae81-cee6fc010741.png";
+
+// NEW: Uploaded agent screenshots
+const agentDesktopScreenshot = "/lovable-uploads/f77a90b2-bee1-40d1-af56-72dcb4ea7619.png";
+const agentMobileScreenshot = "/lovable-uploads/4f3f270e-a6f6-4ed5-9e37-385af68e389b.png";
 
 const LovableDevicePreview = ({
   previewMode,
@@ -83,6 +87,7 @@ const LovableDevicePreview = ({
                 <div className="absolute top-[15px] left-1/2 transform -translate-x-1/2 w-[84px] h-[14px] bg-black rounded-[1rem] z-10" />
                 {/* Phone screen area - nearly exact to image size */}
                 <div className="w-[206px] h-[441px] rounded-[1.17rem] overflow-hidden flex items-center justify-center relative">
+                  {/* Player or Agent mobile site */}
                   {previewMode === "player" ? (
                     <img
                       src={playerMobileImage}
@@ -97,16 +102,17 @@ const LovableDevicePreview = ({
                       }}
                     />
                   ) : (
-                    <iframe
-                      src={agentSiteUrl}
-                      title="Agent Mobile Site"
-                      className="w-full h-full rounded-[1.17rem] bg-transparent"
+                    <img
+                      src={agentMobileScreenshot}
+                      alt="Agent Mobile Site"
+                      className="w-full h-full object-cover rounded-[1.17rem]"
                       style={{
-                        border: "none",
-                        objectFit: "cover",
-                        background: "transparent"
+                        display: 'block',
+                        background: "#18181b",
+                        margin: 0,
+                        padding: 0,
+                        boxShadow: "0 2px 8px 0 rgba(0,0,0,0.10)"
                       }}
-                      allow="clipboard-write; fullscreen"
                     />
                   )}
                   {/* Bottom gradient overlay */}
@@ -122,6 +128,7 @@ const LovableDevicePreview = ({
                 <div className="w-[363px] h-[229px] bg-black rounded-t-2xl shadow-2xl border-2 border-gray-700 p-0 flex items-center justify-center">
                   {/* Inner screen area is now 331x194 */}
                   <div className="w-[331px] h-[194px] bg-gray-950 rounded-2xl flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden p-0">
+                    {/* Player or Agent desktop site */}
                     {previewMode === "player" ? (
                       <div className="w-full h-full flex items-center justify-center bg-gray-950 rounded-2xl overflow-hidden p-2">
                         <img
@@ -137,17 +144,19 @@ const LovableDevicePreview = ({
                         />
                       </div>
                     ) : (
-                      <iframe
-                        src={agentSiteUrl}
-                        title="Agent Desktop Site"
-                        className="w-full h-full rounded-2xl bg-transparent"
-                        style={{
-                          border: "none",
-                          objectFit: "cover",
-                          background: "transparent",
-                        }}
-                        allow="clipboard-write; fullscreen"
-                      />
+                      <div className="w-full h-full flex items-center justify-center bg-gray-950 rounded-2xl overflow-hidden p-2">
+                        <img
+                          src={agentDesktopScreenshot}
+                          alt="Agent Desktop Site"
+                          className="w-full max-h-full object-contain rounded-xl bg-gray-900"
+                          style={{
+                            boxShadow: "0 2px 16px 0 rgba(0,0,0,0.19)",
+                            background: "#18181b",
+                            paddingTop: "12px",
+                            paddingBottom: "12px",
+                          }}
+                        />
+                      </div>
                     )}
                     <div className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-black/30 to-transparent rounded-b-2xl pointer-events-none" />
                   </div>
@@ -165,3 +174,4 @@ const LovableDevicePreview = ({
 );
 
 export default LovableDevicePreview;
+
