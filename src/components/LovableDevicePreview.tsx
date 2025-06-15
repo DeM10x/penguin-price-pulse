@@ -77,17 +77,17 @@ const LovableDevicePreview = ({
         <div className="flex justify-center">
           {deviceMode === 'mobile' ? (
             <div className="relative">
-              {/* iPhone 16 Mockup - EVEN LARGER */}
-              <div className="w-[350px] h-[790px] bg-black rounded-[3rem] shadow-2xl border-4 border-gray-800 flex items-center justify-center p-0">
+              {/* iPhone 16 Mockup - 30% BIGGER */}
+              <div className="w-[455px] h-[1028px] bg-black rounded-[3.9rem] shadow-2xl border-4 border-gray-800 flex items-center justify-center p-0">
                 {/* Top notch (scaled up for device) */}
-                <div className="absolute top-9 left-1/2 transform -translate-x-1/2 w-44 h-8 bg-black rounded-[2rem] z-10" />
-                {/* Phone screen area - scaled accordingly */}
-                <div className="w-[320px] h-[715px] rounded-[2.5rem] overflow-hidden flex items-center justify-center relative">
+                <div className="absolute top-[46px] left-1/2 transform -translate-x-1/2 w-[228px] h-[42px] bg-black rounded-[2.6rem] z-10" />
+                {/* Phone screen area - scaled up */}
+                <div className="w-[416px] h-[930px] rounded-[3.3rem] overflow-hidden flex items-center justify-center relative">
                   {previewMode === "player" ? (
                     <img
                       src={playerMobileImage}
                       alt="Player Mobile Site"
-                      className="w-full h-full object-cover rounded-[2.5rem]"
+                      className="w-full h-full object-cover rounded-[3.3rem]"
                       style={{
                         display: 'block',
                         background: "#18181b",
@@ -100,7 +100,7 @@ const LovableDevicePreview = ({
                     <iframe
                       src={agentSiteUrl}
                       title="Agent Mobile Site"
-                      className="w-full h-full rounded-[2.5rem] bg-transparent"
+                      className="w-full h-full rounded-[3.3rem] bg-transparent"
                       style={{
                         border: "none",
                         objectFit: "cover",
@@ -110,7 +110,7 @@ const LovableDevicePreview = ({
                     />
                   )}
                   {/* Bottom gradient overlay */}
-                  <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-black/30 to-transparent rounded-b-[2.5rem] pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black/30 to-transparent rounded-b-[3.3rem] pointer-events-none" />
                 </div>
               </div>
             </div>
