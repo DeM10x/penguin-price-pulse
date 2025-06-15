@@ -17,7 +17,7 @@ const LovableHero = () => (
             <div className="bg-black/80 backdrop-blur-sm px-8 py-4 rounded-2xl">
               <p className="text-lg md:text-xl text-gray-300 mb-2">JUST</p>
               <div className="text-6xl md:text-8xl font-black text-green-400 animate-pulse">
-                $5
+                $7
               </div>
               <p className="text-lg md:text-xl text-gray-300 mt-2">
                 PER ACTIVE PLAYER/WEEK
