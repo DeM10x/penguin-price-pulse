@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -79,20 +80,29 @@ const Index = () => {
   return (
     <div className="min-h-screen text-white overflow-hidden relative">
       {/* 3D Background - Fixed positioning with proper z-index */}
-      <iframe 
-        src="https://my.spline.design/earthdayandnight-qOBYiE3ATDTB57pOvUbvrVkd/" 
-        frameBorder="0" 
-        width="100%" 
-        height="100%" 
-        className="fixed top-0 left-0 w-full h-full"
+      <iframe
+        src="https://my.spline.design/earthdayandnight-qOBYiE3ATDTB57pOvUbvrVkd/"
+        frameBorder="0"
+        width="100%"
+        height="100%"
+        className="fixed top-0 left-0 w-full h-full z-0"
         style={{
-          zIndex: 1,
-          pointerEvents: "none"
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100vw",
+          height: "100vh",
+          zIndex: 0,
+          border: "none"
         }}
+        allowFullScreen
+        // pointerEvents removed so mouse can interact with Spline world
       />
 
-      {/* Dark overlay to ensure text readability */}
-      <div className="fixed top-0 left-0 w-full h-full bg-black/40 z-10 pointer-events-none" />
+      {/* Dark overlay to restore site's moody look, but let iframe receive mouse */}
+      <div
+        className="fixed top-0 left-0 w-full h-full bg-black/40 z-10 pointer-events-none"
+      />
 
       {/* All content with higher z-index */}
       <div className="relative z-20">
@@ -475,3 +485,4 @@ const Index = () => {
 };
 
 export default Index;
+
