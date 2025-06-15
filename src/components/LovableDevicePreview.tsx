@@ -116,12 +116,12 @@ const LovableDevicePreview = ({
             </div>
           ) : (
             <div className="relative">
-              {/* Laptop Mockup - now 40% smaller */}
+              {/* Laptop Mockup - now 10% less wide, 20% less tall */}
               <div className="relative">
-                {/* Frame is now 40% smaller: 748x528 => 448x317 */}
-                <div className="w-[448px] h-[317px] bg-black rounded-t-2xl shadow-2xl border-2 border-gray-700 p-0 flex items-center justify-center">
-                  {/* Inner screen area is now 682x450 => 409x270 */}
-                  <div className="w-[409px] h-[270px] bg-gray-950 rounded-2xl flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden p-0">
+                {/* Frame is now 403x254 */}
+                <div className="w-[403px] h-[254px] bg-black rounded-t-2xl shadow-2xl border-2 border-gray-700 p-0 flex items-center justify-center">
+                  {/* Inner screen area is now 368x216 */}
+                  <div className="w-[368px] h-[216px] bg-gray-950 rounded-2xl flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden p-0">
                     {previewMode === "player" ? (
                       <div className="w-full h-full flex items-center justify-center bg-gray-950 rounded-2xl overflow-hidden p-2">
                         <img
@@ -152,9 +152,9 @@ const LovableDevicePreview = ({
                     <div className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-black/30 to-transparent rounded-b-2xl pointer-events-none" />
                   </div>
                 </div>
-                {/* Enlarge the base in proportion (now scaled down) */}
-                <div className="w-[469px] h-[4px] bg-gray-700 rounded-b-2xl mx-auto border-2 border-gray-600 border-t-0"></div>
-                <div className="w-[446px] h-[2px] bg-gray-600 rounded-b-lg mx-auto"></div>
+                {/* Scale the base in proportion */}
+                <div className="w-[422px] h-[3px] bg-gray-700 rounded-b-2xl mx-auto border-2 border-gray-600 border-t-0"></div>
+                <div className="w-[401px] h-[1.5px] bg-gray-600 rounded-b-lg mx-auto"></div>
               </div>
             </div>
           )}
