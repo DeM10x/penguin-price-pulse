@@ -90,7 +90,7 @@ const Index = () => {
           style={{
             width: "100vw",
             height: "100vh",
-            transform: "scale(2.0)",
+            transform: "scale(2.1)", // Increased zoom to 2.1
             transformOrigin: "center center",
           }}
         >
@@ -103,7 +103,7 @@ const Index = () => {
               width: "100vw",
               height: "100vh",
               border: "none",
-              pointerEvents: "auto",
+              pointerEvents: "auto", // Interactivity for mouse drag/move
             }}
             allowFullScreen
           />
