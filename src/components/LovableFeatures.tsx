@@ -45,17 +45,20 @@ const penguinFeatures = [
   {
     title: "Exclusive casinos Plinko/Pragmatic",
     iframe: (
-      <div className="flex items-center justify-center w-full h-full">
-        <div className="scale-[.5] origin-center w-full h-full flex items-center justify-center">
-          <iframe
-            src="https://my.spline.design/techinspired3dassetsgamepad-xb96cT3J5vaJwiNrTX7rXHPT/"
-            frameBorder="0"
-            width="100%"
-            height="100%"
-            className="rounded-xl w-full h-full"
-            allowFullScreen
-          ></iframe>
-        </div>
+      <div className="flex items-center justify-center w-full h-full overflow-hidden relative">
+        <iframe
+          src="https://my.spline.design/techinspired3dassetsgamepad-xb96cT3J5vaJwiNrTX7rXHPT/"
+          frameBorder="0"
+          // Increased iframe size, but scale its content down to 0.5 and recenter
+          style={{
+            width: "200%",
+            height: "200%",
+            transform: "scale(0.5)",
+            transformOrigin: "top left"
+          }}
+          className="rounded-xl"
+          allowFullScreen
+        ></iframe>
       </div>
     ),
   },
