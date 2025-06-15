@@ -116,21 +116,23 @@ const LovableDevicePreview = ({
             </div>
           ) : (
             <div className="relative">
-              {/* Laptop Mockup */}
+              {/* Laptop Mockup - enlarged */}
               <div className="relative">
-                <div className="w-[500px] h-[350px] bg-black rounded-t-lg shadow-2xl border-2 border-gray-700 p-0 flex items-center justify-center">
-                  <div className="w-[454px] h-[300px] bg-gray-950 rounded-xl flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden p-0">
+                {/* Increased the overall width and height */}
+                <div className="w-[680px] h-[440px] bg-black rounded-t-2xl shadow-2xl border-2 border-gray-700 p-0 flex items-center justify-center">
+                  {/* Inner screen area enlarged */}
+                  <div className="w-[620px] h-[375px] bg-gray-950 rounded-2xl flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden p-0">
                     {previewMode === "player" ? (
-                      <div className="w-full h-full flex items-center justify-center bg-gray-950 rounded-xl overflow-hidden p-4">
+                      <div className="w-full h-full flex items-center justify-center bg-gray-950 rounded-2xl overflow-hidden p-2">
                         <img
                           src={playerDesktopImage}
                           alt="Player Desktop Site"
-                          className="w-full max-h-full object-contain rounded-lg bg-gray-900"
+                          className="w-full max-h-full object-contain rounded-xl bg-gray-900"
                           style={{
                             boxShadow: "0 2px 16px 0 rgba(0,0,0,0.19)",
                             background: "#18181b",
-                            paddingTop: "16px",
-                            paddingBottom: "16px",
+                            paddingTop: "12px",
+                            paddingBottom: "12px",
                           }}
                         />
                       </div>
@@ -138,7 +140,7 @@ const LovableDevicePreview = ({
                       <iframe
                         src={agentSiteUrl}
                         title="Agent Desktop Site"
-                        className="w-full h-full rounded-xl bg-transparent"
+                        className="w-full h-full rounded-2xl bg-transparent"
                         style={{
                           border: "none",
                           objectFit: "cover",
@@ -147,11 +149,12 @@ const LovableDevicePreview = ({
                         allow="clipboard-write; fullscreen"
                       />
                     )}
-                    <div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-black/30 to-transparent rounded-b-xl pointer-events-none" />
+                    <div className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-black/30 to-transparent rounded-b-2xl pointer-events-none" />
                   </div>
                 </div>
-                <div className="w-[520px] h-4 bg-gray-700 rounded-b-xl mx-auto border-2 border-gray-600 border-t-0"></div>
-                <div className="w-[480px] h-2 bg-gray-600 rounded-b-lg mx-auto"></div>
+                {/* Enlarged the base */}
+                <div className="w-[710px] h-5 bg-gray-700 rounded-b-2xl mx-auto border-2 border-gray-600 border-t-0"></div>
+                <div className="w-[675px] h-2 bg-gray-600 rounded-b-lg mx-auto"></div>
               </div>
             </div>
           )}
