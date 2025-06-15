@@ -85,12 +85,11 @@ const LovableDevicePreview = ({
                       <img
                         src={playerMobileImage}
                         alt="Player Mobile Site"
-                        className="w-full h-full object-contain rounded-[2.1rem] bg-gray-900"
+                        className="w-full h-full object-cover rounded-[2.1rem] bg-gray-900"
                         style={{
                           background: "#18181b",
                           boxShadow: "0 2px 8px 0 rgba(0,0,0,0.10)",
-                          paddingTop: "8px",
-                          paddingBottom: "8px",
+                          // paddingTop, paddingBottom removed for true coverage
                         }}
                       />
                     ) : (
