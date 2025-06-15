@@ -1,3 +1,5 @@
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import React from "react";
 
 const includedFeatures = [
   "Full access to pre-match betting on all major sports",
@@ -24,6 +26,23 @@ const addOns = [
     name: "Premium Horse Betting Platform",
     description: "Add for $2 per head",
   },
+];
+
+const penguinFeatures = [
+  {
+    title: "All Main Sports",
+    iframe: (
+      <iframe
+        src="https://my.spline.design/jacksoncard001-AoandObkKvc7nayhjBKYF3CZ/"
+        frameBorder="0"
+        width="100%"
+        height="100%"
+        className="rounded-xl w-full h-full"
+        allowFullScreen
+      ></iframe>
+    ),
+  },
+  // Future features can be added here as more become available
 ];
 
 const LovableFeatures = () => (
@@ -61,9 +80,38 @@ const LovableFeatures = () => (
           </div>
         </div>
       </div>
+      {/* NEW SECTION: Exclusive Penguin Features */}
+      <div className="max-w-6xl mx-auto mt-20">
+        <Tabs defaultValue="penguin" className="w-full">
+          <TabsList className="flex justify-center mb-8">
+            <TabsTrigger value="penguin" className="text-lg md:text-xl font-bold px-8 py-2">
+              Exclusive Penguin Features
+            </TabsTrigger>
+          </TabsList>
+          <TabsContent value="penguin">
+            <div className="flex flex-row flex-wrap gap-8 justify-center items-stretch w-full">
+              {penguinFeatures.map((feature, idx) => (
+                <div
+                  key={feature.title}
+                  className="bg-black/60 backdrop-blur-lg rounded-xl shadow-lg p-6 flex flex-col items-center w-full sm:w-96 md:w-80 lg:w-72 xl:w-64 aspect-[4/5]"
+                  style={{
+                    minWidth: "250px",
+                    maxWidth: "350px",
+                    flex: "1 1 280px"
+                  }}
+                >
+                  <h4 className="text-lg md:text-xl font-semibold mb-4 text-center">{feature.title}</h4>
+                  <div className="w-full h-64 md:h-56 flex-1 flex items-center justify-center relative overflow-hidden rounded-lg bg-gray-900 border border-gray-700">
+                    {feature.iframe}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </TabsContent>
+        </Tabs>
+      </div>
     </div>
   </section>
 );
 
 export default LovableFeatures;
-
