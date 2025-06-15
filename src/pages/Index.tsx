@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -81,7 +80,7 @@ const Index = () => {
     <div className="min-h-screen text-white overflow-hidden relative">
       {/* 3D Background - Fixed positioning with proper z-index */}
       <iframe
-        src="https://my.spline.design/earthdayandnight-qOBYiE3ATDTB57pOvUbvrVkd/"
+        src="https://my.spline.design/particlenebula-kjgZUD8hSBdyuijGw67RUCxf/"
         frameBorder="0"
         width="100%"
         height="100%"
@@ -485,4 +484,3 @@ const Index = () => {
 };
 
 export default Index;
-
