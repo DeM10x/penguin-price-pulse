@@ -46,7 +46,7 @@ const penguinFeatures = [
     title: "Exclusive casinos Plinko/Pragmatic",
     iframe: (
       <div className="flex items-center justify-center w-full h-full">
-        <div className="scale-[.6] origin-center w-full h-full flex items-center justify-center">
+        <div className="scale-[.5] origin-center w-full h-full flex items-center justify-center">
           <iframe
             src="https://my.spline.design/techinspired3dassetsgamepad-xb96cT3J5vaJwiNrTX7rXHPT/"
             frameBorder="0"
