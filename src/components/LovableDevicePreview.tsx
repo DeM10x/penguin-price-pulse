@@ -116,12 +116,12 @@ const LovableDevicePreview = ({
             </div>
           ) : (
             <div className="relative">
-              {/* Laptop Mockup - enlarged */}
+              {/* Laptop Mockup - now 10% wider and 20% taller */}
               <div className="relative">
-                {/* Increased the overall width and height */}
-                <div className="w-[680px] h-[440px] bg-black rounded-t-2xl shadow-2xl border-2 border-gray-700 p-0 flex items-center justify-center">
-                  {/* Inner screen area enlarged */}
-                  <div className="w-[620px] h-[375px] bg-gray-950 rounded-2xl flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden p-0">
+                {/* Frame is now 748x528 */}
+                <div className="w-[748px] h-[528px] bg-black rounded-t-2xl shadow-2xl border-2 border-gray-700 p-0 flex items-center justify-center">
+                  {/* Inner screen area is now 682x450 */}
+                  <div className="w-[682px] h-[450px] bg-gray-950 rounded-2xl flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden p-0">
                     {previewMode === "player" ? (
                       <div className="w-full h-full flex items-center justify-center bg-gray-950 rounded-2xl overflow-hidden p-2">
                         <img
@@ -152,9 +152,9 @@ const LovableDevicePreview = ({
                     <div className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-black/30 to-transparent rounded-b-2xl pointer-events-none" />
                   </div>
                 </div>
-                {/* Enlarged the base */}
-                <div className="w-[710px] h-5 bg-gray-700 rounded-b-2xl mx-auto border-2 border-gray-600 border-t-0"></div>
-                <div className="w-[675px] h-2 bg-gray-600 rounded-b-lg mx-auto"></div>
+                {/* Enlarge the base in proportion (approx 10% wider, 20% taller) */}
+                <div className="w-[782px] h-6 bg-gray-700 rounded-b-2xl mx-auto border-2 border-gray-600 border-t-0"></div>
+                <div className="w-[744px] h-2 bg-gray-600 rounded-b-lg mx-auto"></div>
               </div>
             </div>
           )}
