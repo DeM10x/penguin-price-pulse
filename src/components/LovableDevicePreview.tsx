@@ -77,12 +77,12 @@ const LovableDevicePreview = ({
         <div className="flex justify-center">
           {deviceMode === 'mobile' ? (
             <div className="relative">
-              {/* iPhone 16 Mockup - LARGER */}
-              <div className="w-[340px] h-[750px] bg-black rounded-[3rem] shadow-2xl border-4 border-gray-800 flex items-center justify-center p-0">
-                {/* Top notch (wider and taller for large device) */}
-                <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-40 h-7 bg-black rounded-[2rem] z-10" />
-                {/* Phone screen area - LARGER*/}
-                <div className="w-[312px] h-[672px] rounded-[2.5rem] overflow-hidden flex items-center justify-center relative">
+              {/* iPhone 16 Mockup - EVEN LARGER */}
+              <div className="w-[350px] h-[790px] bg-black rounded-[3rem] shadow-2xl border-4 border-gray-800 flex items-center justify-center p-0">
+                {/* Top notch (scaled up for device) */}
+                <div className="absolute top-9 left-1/2 transform -translate-x-1/2 w-44 h-8 bg-black rounded-[2rem] z-10" />
+                {/* Phone screen area - scaled accordingly */}
+                <div className="w-[320px] h-[715px] rounded-[2.5rem] overflow-hidden flex items-center justify-center relative">
                   {previewMode === "player" ? (
                     <img
                       src={playerMobileImage}
@@ -110,7 +110,7 @@ const LovableDevicePreview = ({
                     />
                   )}
                   {/* Bottom gradient overlay */}
-                  <div className="absolute bottom-0 left-0 w-full h-10 bg-gradient-to-t from-black/30 to-transparent rounded-b-[2.5rem] pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-black/30 to-transparent rounded-b-[2.5rem] pointer-events-none" />
                 </div>
               </div>
             </div>
