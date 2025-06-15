@@ -422,13 +422,15 @@ const Index = () => {
                   </div>
                 </div>
                 
-                <Button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-black font-bold py-4 text-lg transition-all duration-300 hover:scale-105 mx-auto block"
-                >
-                  <Users className="w-5 h-5 mr-2" />
-                  START MY SPORTSBOOK BUSINESS NOW
-                </Button>
+                <div className="flex justify-center">
+                  <Button
+                    type="submit"
+                    className="bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-black font-bold py-4 px-8 text-lg transition-all duration-300 hover:scale-105 flex items-center whitespace-nowrap"
+                  >
+                    <Users className="w-5 h-5 mr-2 flex-shrink-0" />
+                    START MY SPORTSBOOK BUSINESS NOW
+                  </Button>
+                </div>
               </form>
             </CardContent>
           </Card>
