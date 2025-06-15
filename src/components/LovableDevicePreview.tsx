@@ -10,6 +10,9 @@ type Props = {
   setDeviceMode: (mode: "mobile" | "desktop") => void;
 };
 
+const playerSiteUrl = "https://penguinplay.bet";
+const agentSiteUrl = "https://penguinagent.com";
+
 const LovableDevicePreview = ({
   previewMode,
   deviceMode,
@@ -76,26 +79,20 @@ const LovableDevicePreview = ({
                 <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-full z-10" />
                 {/* Screen */}
                 <div className="w-full h-full bg-gray-900 rounded-[2.5rem] flex items-center justify-center border border-gray-600 relative overflow-hidden">
-                  {previewMode === 'player' ? (
-                    <div className="w-[240px] h-[528px] bg-gray-950 rounded-[2.1rem] flex items-center justify-center shadow-inner border border-gray-800 relative">
-                      <img 
-                        src="/lovable-uploads/5fa491f7-a41f-4c2c-b0d6-26549b79b0b4.png" 
-                        alt="Player Mobile Screenshot"
-                        className="w-full h-full object-contain rounded-[1.8rem] bg-gray-200/20 shadow-inner"
-                        style={{ objectPosition: "center" }}
-                      />
-                      {/* subtle overlay at the bottom */}
-                      <div className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-black/30 to-transparent rounded-b-[1.8rem] pointer-events-none" />
-                    </div>
-                  ) : (
-                    <div className="text-center z-20">
-                      <div className="text-green-400 text-3xl mb-3">📱</div>
-                      <div className="text-white font-bold text-lg">
-                        Agent Site
-                      </div>
-                      <div className="text-gray-400 text-sm mt-2">iPhone 16 Preview</div>
-                    </div>
-                  )}
+                  <div className="w-[240px] h-[528px] bg-gray-950 rounded-[2.1rem] flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden">
+                    <iframe
+                      src={previewMode === "player" ? playerSiteUrl : agentSiteUrl}
+                      title={previewMode === "player" ? "Player Mobile Site" : "Agent Mobile Site"}
+                      className="w-full h-full rounded-[1.8rem] bg-gray-200/20 shadow-inner"
+                      style={{
+                        border: "none",
+                        objectFit: "cover",
+                        background: "#18181b",
+                      }}
+                    />
+                    {/* subtle overlay at the bottom */}
+                    <div className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-black/30 to-transparent rounded-b-[1.8rem] pointer-events-none" />
+                  </div>
                 </div>
               </div>
             </div>
@@ -106,32 +103,20 @@ const LovableDevicePreview = ({
                 {/* Screen */}
                 <div className="w-[500px] h-[320px] bg-black rounded-t-lg p-4 shadow-2xl border-2 border-gray-700">
                   <div className="w-full h-full bg-gray-900 rounded-lg flex items-center justify-center border border-gray-600 overflow-hidden">
-                    {previewMode === 'player' ? (
-                      <div className="w-[450px] h-[260px] bg-gray-950 rounded-xl flex items-center justify-center shadow-inner border border-gray-800 relative">
-                        {/* Use the newly uploaded image for the desktop preview */}
-                        <img 
-                          src="/lovable-uploads/cf8ce5b7-62ef-4158-b5bd-235516417cf3.png"
-                          alt="Player Desktop Screenshot"
-                          className="w-full h-full object-contain rounded-lg bg-gray-100/10 shadow-inner p-4"
-                          style={{
-                            objectPosition: "center",
-                            // The padding above (`p-4`) ensures the image is well centered, 
-                            // and extra space is usable if image not exact aspect ratio.
-                            backgroundColor: "#18181b" // Tailwind gray-950 for extra subtle integration
-                          }}
-                        />
-                        {/* subtle overlay at the bottom */}
-                        <div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-black/30 to-transparent rounded-b-lg pointer-events-none" />
-                      </div>
-                    ) : (
-                      <div className="text-center">
-                        <div className="text-green-400 text-4xl mb-3">💻</div>
-                        <div className="text-white font-bold text-xl">
-                          Agent Site
-                        </div>
-                        <div className="text-gray-400 text-sm mt-2">Laptop Preview</div>
-                      </div>
-                    )}
+                    <div className="w-[450px] h-[260px] bg-gray-950 rounded-xl flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden">
+                      <iframe
+                        src={previewMode === "player" ? playerSiteUrl : agentSiteUrl}
+                        title={previewMode === "player" ? "Player Desktop Site" : "Agent Desktop Site"}
+                        className="w-full h-full rounded-lg bg-gray-100/10 shadow-inner p-4"
+                        style={{
+                          border: "none",
+                          objectFit: "cover",
+                          background: "#18181b",
+                        }}
+                      />
+                      {/* subtle overlay at the bottom */}
+                      <div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-black/30 to-transparent rounded-b-lg pointer-events-none" />
+                    </div>
                   </div>
                 </div>
                 {/* Laptop base */}
