@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Smartphone, Monitor } from "lucide-react";
 import React from "react";
@@ -101,19 +100,23 @@ const LovableDevicePreview = ({
             <div className="relative">
               {/* Laptop Mockup */}
               <div className="relative">
-                <div className="w-[500px] h-[320px] bg-black rounded-t-lg shadow-2xl border-2 border-gray-700 p-0 flex items-center justify-center">
-                  <div className="w-[454px] h-[262px] bg-gray-950 rounded-xl flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden p-0">
+                <div className="w-[500px] h-[350px] bg-black rounded-t-lg shadow-2xl border-2 border-gray-700 p-0 flex items-center justify-center">
+                  <div className="w-[454px] h-[300px] bg-gray-950 rounded-xl flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden p-0">
                     {previewMode === "player" ? (
-                      <img
-                        src={playerDesktopImage}
-                        alt="Player Desktop Site"
-                        className="w-full h-full object-contain rounded-xl bg-gray-950"
-                        style={{
-                          // Ensure the image fits in as best as possible with some safe-box
-                          display: "block",
-                          objectFit: "contain"
-                        }}
-                      />
+                      <div className="w-full h-full flex items-center justify-center bg-gray-950 rounded-xl overflow-hidden p-4">
+                        <img
+                          src={playerDesktopImage}
+                          alt="Player Desktop Site"
+                          className="w-full max-h-full object-contain rounded-lg bg-gray-900"
+                          style={{
+                            boxShadow: "0 2px 16px 0 rgba(0,0,0,0.19)",
+                            background: "#18181b",
+                            // add a bit vertical padding so the image doesn't touch the very top/bottom
+                            paddingTop: "16px",
+                            paddingBottom: "16px",
+                          }}
+                        />
+                      </div>
                     ) : (
                       <iframe
                         src={agentSiteUrl}
@@ -142,4 +145,3 @@ const LovableDevicePreview = ({
 );
 
 export default LovableDevicePreview;
-
