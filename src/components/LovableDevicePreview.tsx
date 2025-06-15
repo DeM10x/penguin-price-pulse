@@ -77,10 +77,11 @@ const LovableDevicePreview = ({
           {deviceMode === 'mobile' ? (
             <div className="relative">
               {/* iPhone 16 Mockup */}
-              <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl border-4 border-gray-800">
+              <div className="w-72 h-[600px] bg-black rounded-[3rem] shadow-2xl border-4 border-gray-800 flex items-center justify-center p-0">
                 <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-full z-10" />
-                <div className="w-full h-full bg-gray-900 rounded-[2.5rem] flex items-center justify-center border border-gray-600 relative overflow-hidden p-0">
-                  <div className="w-[240px] h-[528px] bg-gray-950 rounded-[2.1rem] flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden p-0">
+                {/* Remove all extra border, p-*, m-*, and unnecessary wrappers */}
+                <div className="w-[256px] h-[544px] bg-gray-900 rounded-[2.5rem] flex items-center justify-center border border-gray-600 relative overflow-hidden p-0">
+                  <div className="w-full h-full rounded-[2.1rem] flex items-center justify-center shadow-inner border-none relative overflow-hidden p-0 m-0">
                     {previewMode === "player" ? (
                       <img
                         src={playerMobileImage}
@@ -89,7 +90,8 @@ const LovableDevicePreview = ({
                         style={{
                           background: "#18181b",
                           boxShadow: "0 2px 8px 0 rgba(0,0,0,0.10)",
-                          // paddingTop, paddingBottom removed for true coverage
+                          margin: 0,
+                          padding: 0,
                         }}
                       />
                     ) : (
