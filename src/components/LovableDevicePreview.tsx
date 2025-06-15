@@ -77,21 +77,22 @@ const LovableDevicePreview = ({
               {/* iPhone 16 Mockup */}
               <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl border-4 border-gray-800">
                 <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-full z-10" />
-                {/* Screen */}
-                <div className="w-full h-full bg-gray-900 rounded-[2.5rem] flex items-center justify-center border border-gray-600 relative overflow-hidden">
-                  <div className="w-[240px] h-[528px] bg-gray-950 rounded-[2.1rem] flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden">
+                {/* Remove extra padding from the screen and maximize iframe */}
+                <div className="w-full h-full bg-gray-900 rounded-[2.5rem] flex items-center justify-center border border-gray-600 relative overflow-hidden p-0">
+                  <div className="w-[240px] h-[528px] bg-gray-950 rounded-[2.1rem] flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden p-0">
                     <iframe
                       src={previewMode === "player" ? playerSiteUrl : agentSiteUrl}
                       title={previewMode === "player" ? "Player Mobile Site" : "Agent Mobile Site"}
-                      className="w-full h-full rounded-[1.8rem] bg-gray-200/20 shadow-inner"
+                      className="w-full h-full rounded-[2.1rem] bg-transparent"
                       style={{
                         border: "none",
                         objectFit: "cover",
-                        background: "#18181b",
+                        background: "transparent",
                       }}
+                      allow="clipboard-write; fullscreen"
                     />
                     {/* subtle overlay at the bottom */}
-                    <div className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-black/30 to-transparent rounded-b-[1.8rem] pointer-events-none" />
+                    <div className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-black/30 to-transparent rounded-b-[2.1rem] pointer-events-none" />
                   </div>
                 </div>
               </div>
@@ -100,23 +101,22 @@ const LovableDevicePreview = ({
             <div className="relative">
               {/* Laptop Mockup */}
               <div className="relative">
-                {/* Screen */}
-                <div className="w-[500px] h-[320px] bg-black rounded-t-lg p-4 shadow-2xl border-2 border-gray-700">
-                  <div className="w-full h-full bg-gray-900 rounded-lg flex items-center justify-center border border-gray-600 overflow-hidden">
-                    <div className="w-[450px] h-[260px] bg-gray-950 rounded-xl flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden">
-                      <iframe
-                        src={previewMode === "player" ? playerSiteUrl : agentSiteUrl}
-                        title={previewMode === "player" ? "Player Desktop Site" : "Agent Desktop Site"}
-                        className="w-full h-full rounded-lg bg-gray-100/10 shadow-inner p-4"
-                        style={{
-                          border: "none",
-                          objectFit: "cover",
-                          background: "#18181b",
-                        }}
-                      />
-                      {/* subtle overlay at the bottom */}
-                      <div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-black/30 to-transparent rounded-b-lg pointer-events-none" />
-                    </div>
+                {/* Remove all inside paddings and max out iframe */}
+                <div className="w-[500px] h-[320px] bg-black rounded-t-lg shadow-2xl border-2 border-gray-700 p-0 flex items-center justify-center">
+                  <div className="w-[454px] h-[262px] bg-gray-950 rounded-xl flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden p-0">
+                    <iframe
+                      src={previewMode === "player" ? playerSiteUrl : agentSiteUrl}
+                      title={previewMode === "player" ? "Player Desktop Site" : "Agent Desktop Site"}
+                      className="w-full h-full rounded-xl bg-transparent"
+                      style={{
+                        border: "none",
+                        objectFit: "cover",
+                        background: "transparent",
+                      }}
+                      allow="clipboard-write; fullscreen"
+                    />
+                    {/* subtle overlay at the bottom */}
+                    <div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-black/30 to-transparent rounded-b-xl pointer-events-none" />
                   </div>
                 </div>
                 {/* Laptop base */}
