@@ -42,6 +42,19 @@ const penguinFeatures = [
       ></iframe>
     ),
   },
+  {
+    title: "Exclusive casinos Plinko/Pragmatic",
+    iframe: (
+      <iframe
+        src="https://my.spline.design/techinspired3dassetsgamepad-xb96cT3J5vaJwiNrTX7rXHPT/"
+        frameBorder="0"
+        width="100%"
+        height="100%"
+        className="rounded-xl w-full h-full"
+        allowFullScreen
+      ></iframe>
+    ),
+  },
   // Future features can be added here as more become available
 ];
 
