@@ -116,12 +116,12 @@ const LovableDevicePreview = ({
             </div>
           ) : (
             <div className="relative">
-              {/* Laptop Mockup - now 10% less wide, 20% less tall */}
+              {/* Laptop Mockup - now 10% smaller in width and height */}
               <div className="relative">
-                {/* Frame is now 403x254 */}
-                <div className="w-[403px] h-[254px] bg-black rounded-t-2xl shadow-2xl border-2 border-gray-700 p-0 flex items-center justify-center">
-                  {/* Inner screen area is now 368x216 */}
-                  <div className="w-[368px] h-[216px] bg-gray-950 rounded-2xl flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden p-0">
+                {/* Frame is now 363x229 */}
+                <div className="w-[363px] h-[229px] bg-black rounded-t-2xl shadow-2xl border-2 border-gray-700 p-0 flex items-center justify-center">
+                  {/* Inner screen area is now 331x194 */}
+                  <div className="w-[331px] h-[194px] bg-gray-950 rounded-2xl flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden p-0">
                     {previewMode === "player" ? (
                       <div className="w-full h-full flex items-center justify-center bg-gray-950 rounded-2xl overflow-hidden p-2">
                         <img
@@ -153,8 +153,8 @@ const LovableDevicePreview = ({
                   </div>
                 </div>
                 {/* Scale the base in proportion */}
-                <div className="w-[422px] h-[3px] bg-gray-700 rounded-b-2xl mx-auto border-2 border-gray-600 border-t-0"></div>
-                <div className="w-[401px] h-[1.5px] bg-gray-600 rounded-b-lg mx-auto"></div>
+                <div className="w-[380px] h-[2.7px] bg-gray-700 rounded-b-2xl mx-auto border-2 border-gray-600 border-t-0"></div>
+                <div className="w-[361px] h-[1.35px] bg-gray-600 rounded-b-lg mx-auto"></div>
               </div>
             </div>
           )}
