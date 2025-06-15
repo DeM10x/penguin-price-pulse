@@ -22,8 +22,32 @@ const Index = () => {
   
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Prepare email content
+    const emailContent = {
+      to: 'cs@penguinpph.com',
+      subject: 'New PPH Signup Request',
+      body: `
+        New signup request received:
+        
+        Email: ${formData.email}
+        Desired Username: ${formData.username}
+        Estimated Players: ${formData.playerCount}
+        Contact Email: ${formData.contactEmail}
+        Phone: ${formData.phone || 'Not provided'}
+        
+        Please follow up within 24 hours.
+      `
+    };
+
+    // Create mailto link
+    const mailtoLink = `mailto:${emailContent.to}?subject=${encodeURIComponent(emailContent.subject)}&body=${encodeURIComponent(emailContent.body)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
     toast({
       title: "Registration Submitted!",
       description: "We'll contact you within 24 hours to set up your account.",
@@ -54,25 +78,48 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white overflow-hidden relative">
+      {/* 3D Background */}
+      <iframe 
+        src="https://my.spline.design/earthdayandnight-qOBYiE3ATDTB57pOvUbvrVkd/" 
+        frameBorder="0" 
+        width="100%" 
+        height="100%" 
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          zIndex: -1,
+          pointerEvents: "none"
+        }}
+      />
+
       {/* Floating Buttons */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col space-y-3">
         <Button
-          className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300"
-          onClick={() => window.open("https://t.me/yourhandle", "_blank")}
+          className="w-14 h-14 rounded-full bg-blue-500 hover:bg-blue-600 shadow-lg hover:shadow-xl transition-all duration-300 p-0"
+          onClick={() => window.open("https://t.me/PenguinPerHead", "_blank")}
         >
-          <MessageCircle className="w-6 h-6" />
+          <img 
+            src="/lovable-uploads/c4b41d45-98e2-4b2e-84ba-a735acd5eebc.png" 
+            alt="Telegram"
+            className="w-8 h-8"
+          />
         </Button>
         <Button
-          className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300"
-          onClick={() => window.open("https://wa.me/yourphonenumber", "_blank")}
+          className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300 p-0"
+          onClick={() => window.open("https://wa.me/17282176708", "_blank")}
         >
-          <Phone className="w-6 h-6" />
+          <img 
+            src="/lovable-uploads/a99e531a-9929-4ed6-a62c-af7b489f0447.png" 
+            alt="WhatsApp"
+            className="w-8 h-8"
+          />
         </Button>
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-40 px-6 py-4">
+      <nav className="relative z-40 px-6 py-4 bg-black/20 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
@@ -109,7 +156,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative px-6 py-20">
+      <section className="relative px-6 py-20 bg-black/20 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto text-center">
           <div className="animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -123,7 +170,7 @@ const Index = () => {
             
             <div className="mb-8 animate-scale-in animation-delay-300">
               <div className="inline-block bg-gradient-to-r from-green-400 to-green-600 p-1 rounded-2xl">
-                <div className="bg-black px-8 py-4 rounded-2xl">
+                <div className="bg-black/80 backdrop-blur-sm px-8 py-4 rounded-2xl">
                   <p className="text-lg md:text-xl text-gray-300 mb-2">JUST</p>
                   <div className="text-6xl md:text-8xl font-black text-green-400 animate-pulse">
                     $5
@@ -143,7 +190,7 @@ const Index = () => {
       </section>
 
       {/* Features Section - Clean List Style */}
-      <section className="px-6 py-20">
+      <section className="px-6 py-20 bg-black/20 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
             Everything Included for{" "}
@@ -164,7 +211,7 @@ const Index = () => {
       </section>
 
       {/* Device Preview Section */}
-      <section className="px-6 py-20">
+      <section className="px-6 py-20 bg-black/20 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
             See Your Platform in{" "}
@@ -218,27 +265,43 @@ const Index = () => {
             {/* Device Preview */}
             <div className="flex justify-center">
               {deviceMode === 'mobile' ? (
-                <div className="relative w-64 h-96 bg-black rounded-3xl p-2 shadow-2xl">
-                  <div className="w-full h-full bg-gray-900 rounded-2xl flex items-center justify-center border border-gray-600">
-                    <div className="text-center">
-                      <div className="text-green-400 text-2xl mb-2">📱</div>
-                      <div className="text-white font-bold">
-                        {previewMode === 'player' ? 'Player Site' : 'Agent Site'}
+                <div className="relative">
+                  {/* iPhone 16 Mockup */}
+                  <div className="w-72 h-[600px] bg-black rounded-[3rem] p-2 shadow-2xl border-4 border-gray-800">
+                    {/* iPhone notch */}
+                    <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-full z-10"></div>
+                    {/* Screen */}
+                    <div className="w-full h-full bg-gray-900 rounded-[2.5rem] flex items-center justify-center border border-gray-600 relative overflow-hidden">
+                      <div className="text-center z-20">
+                        <div className="text-green-400 text-3xl mb-3">📱</div>
+                        <div className="text-white font-bold text-lg">
+                          {previewMode === 'player' ? 'Player Site' : 'Agent Site'}
+                        </div>
+                        <div className="text-gray-400 text-sm mt-2">iPhone 16 Preview</div>
                       </div>
-                      <div className="text-gray-400 text-sm mt-2">Mobile Preview</div>
                     </div>
                   </div>
                 </div>
               ) : (
-                <div className="relative w-96 h-64 bg-gray-800 rounded-lg p-4 shadow-2xl">
-                  <div className="w-full h-full bg-gray-900 rounded-lg flex items-center justify-center border border-gray-600">
-                    <div className="text-center">
-                      <div className="text-green-400 text-3xl mb-2">💻</div>
-                      <div className="text-white font-bold text-lg">
-                        {previewMode === 'player' ? 'Player Site' : 'Agent Site'}
+                <div className="relative">
+                  {/* Laptop Mockup */}
+                  <div className="relative">
+                    {/* Screen */}
+                    <div className="w-[500px] h-[320px] bg-black rounded-t-lg p-4 shadow-2xl border-2 border-gray-700">
+                      <div className="w-full h-full bg-gray-900 rounded-lg flex items-center justify-center border border-gray-600">
+                        <div className="text-center">
+                          <div className="text-green-400 text-4xl mb-3">💻</div>
+                          <div className="text-white font-bold text-xl">
+                            {previewMode === 'player' ? 'Player Site' : 'Agent Site'}
+                          </div>
+                          <div className="text-gray-400 text-sm mt-2">Laptop Preview</div>
+                        </div>
                       </div>
-                      <div className="text-gray-400 text-sm mt-2">Desktop Preview</div>
                     </div>
+                    {/* Laptop base */}
+                    <div className="w-[520px] h-4 bg-gray-700 rounded-b-xl mx-auto border-2 border-gray-600 border-t-0"></div>
+                    {/* Laptop hinge */}
+                    <div className="w-[480px] h-2 bg-gray-600 rounded-b-lg mx-auto"></div>
                   </div>
                 </div>
               )}
@@ -248,7 +311,7 @@ const Index = () => {
       </section>
 
       {/* Signup Form Section */}
-      <section id="signup-section" className="px-6 py-20">
+      <section id="signup-section" className="px-6 py-20 bg-black/20 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -361,7 +424,7 @@ const Index = () => {
                 
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-black font-bold py-4 text-lg transition-all duration-300 hover:scale-105"
+                  className="w-full bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-black font-bold py-4 text-lg transition-all duration-300 hover:scale-105 mx-auto block"
                 >
                   <Users className="w-5 h-5 mr-2" />
                   START MY SPORTSBOOK BUSINESS NOW
@@ -373,7 +436,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="px-6 py-12 border-t border-gray-800">
+      <footer className="px-6 py-12 border-t border-gray-800 bg-black/20 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
@@ -388,14 +451,14 @@ const Index = () => {
             <Button 
               variant="ghost" 
               className="text-green-400 hover:text-white"
-              onClick={() => window.open("https://t.me/yourhandle", "_blank")}
+              onClick={() => window.open("https://t.me/PenguinPerHead", "_blank")}
             >
               Telegram Support
             </Button>
             <Button 
               variant="ghost" 
               className="text-green-400 hover:text-white"
-              onClick={() => window.open("https://wa.me/yourphonenumber", "_blank")}
+              onClick={() => window.open("https://wa.me/17282176708", "_blank")}
             >
               WhatsApp Support
             </Button>
