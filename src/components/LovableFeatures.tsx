@@ -33,7 +33,7 @@ const penguinFeatures = [
     title: "All Main Sports",
     iframe: (
       <iframe
-        src="https://my.spline.design/jacksoncard001-AoandObkKvc7nayhjBKYF3CZ/"
+        src="https://my.spline.design/jacksoncard001-BjsvG9NJDVR4rkxEpwaDt31B/"
         frameBorder="0"
         width="100%"
         height="100%"
@@ -93,7 +93,7 @@ const LovableFeatures = () => (
               {penguinFeatures.map((feature, idx) => (
                 <div
                   key={feature.title}
-                  className="bg-black/60 backdrop-blur-lg rounded-xl shadow-lg p-6 flex flex-col items-center w-full sm:w-96 md:w-80 lg:w-72 xl:w-64 aspect-[4/5]"
+                  className="bg-black/60 backdrop-blur-lg rounded-xl shadow-lg p-6 flex flex-col items-center w-full sm:w-96 md:w-80 lg:w-72 xl:w-64 aspect-[4/5] mx-auto"
                   style={{
                     minWidth: "250px",
                     maxWidth: "350px",
