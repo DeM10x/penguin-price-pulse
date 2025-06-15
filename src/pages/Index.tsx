@@ -78,27 +78,38 @@ const Index = () => {
 
   return (
     <div className="min-h-screen text-white overflow-hidden relative">
-      {/* 3D Background - Fixed positioning with proper z-index */}
-      <iframe
-        src="https://my.spline.design/particlenebula-kjgZUD8hSBdyuijGw67RUCxf/"
-        frameBorder="0"
-        width="100%"
-        height="100%"
+      {/* 3D Background - Scaled Zoom */}
+      <div
         className="fixed top-0 left-0 w-full h-full z-0"
         style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100vw",
-          height: "100vh",
-          zIndex: 0,
-          border: "none"
+          overflow: "hidden",
+          pointerEvents: "auto",
         }}
-        allowFullScreen
-        // pointerEvents removed so mouse can interact with Spline world
-      />
-
-      {/* Dark overlay to restore site's moody look, but let iframe receive mouse */}
+      >
+        <div
+          style={{
+            width: "100vw",
+            height: "100vh",
+            transform: "scale(1.6)",
+            transformOrigin: "center center",
+          }}
+        >
+          <iframe
+            src="https://my.spline.design/particlenebula-kjgZUD8hSBdyuijGw67RUCxf/"
+            frameBorder="0"
+            width="100%"
+            height="100%"
+            style={{
+              width: "100vw",
+              height: "100vh",
+              border: "none",
+              pointerEvents: "auto",
+            }}
+            allowFullScreen
+          />
+        </div>
+      </div>
+      {/* Dark overlay for moody look, lets iframe receive interaction */}
       <div
         className="fixed top-0 left-0 w-full h-full bg-black/40 z-10 pointer-events-none"
       />
