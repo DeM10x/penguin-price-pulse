@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Smartphone, Monitor } from "lucide-react";
 import React from "react";
@@ -13,6 +14,7 @@ const playerSiteUrl = "https://penguinplay.bet";
 const agentSiteUrl = "https://penguinagent.com";
 
 const playerDesktopImage = "/lovable-uploads/aa6c961a-afe8-4759-b3a3-baa7bcc39610.png";
+const playerMobileImage = "/lovable-uploads/cb3bf24f-40ca-4a46-9c62-5d511d8ad543.png";
 
 const LovableDevicePreview = ({
   previewMode,
@@ -80,17 +82,31 @@ const LovableDevicePreview = ({
                 <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-full z-10" />
                 <div className="w-full h-full bg-gray-900 rounded-[2.5rem] flex items-center justify-center border border-gray-600 relative overflow-hidden p-0">
                   <div className="w-[240px] h-[528px] bg-gray-950 rounded-[2.1rem] flex items-center justify-center shadow-inner border border-gray-800 relative overflow-hidden p-0">
-                    <iframe
-                      src={previewMode === "player" ? playerSiteUrl : agentSiteUrl}
-                      title={previewMode === "player" ? "Player Mobile Site" : "Agent Mobile Site"}
-                      className="w-full h-full rounded-[2.1rem] bg-transparent"
-                      style={{
-                        border: "none",
-                        objectFit: "cover",
-                        background: "transparent",
-                      }}
-                      allow="clipboard-write; fullscreen"
-                    />
+                    {previewMode === "player" ? (
+                      <img
+                        src={playerMobileImage}
+                        alt="Player Mobile Site"
+                        className="w-full h-full object-contain rounded-[2.1rem] bg-gray-900"
+                        style={{
+                          background: "#18181b",
+                          boxShadow: "0 2px 8px 0 rgba(0,0,0,0.10)",
+                          paddingTop: "8px",
+                          paddingBottom: "8px",
+                        }}
+                      />
+                    ) : (
+                      <iframe
+                        src={agentSiteUrl}
+                        title="Agent Mobile Site"
+                        className="w-full h-full rounded-[2.1rem] bg-transparent"
+                        style={{
+                          border: "none",
+                          objectFit: "cover",
+                          background: "transparent",
+                        }}
+                        allow="clipboard-write; fullscreen"
+                      />
+                    )}
                     <div className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-black/30 to-transparent rounded-b-[2.1rem] pointer-events-none" />
                   </div>
                 </div>
@@ -111,7 +127,6 @@ const LovableDevicePreview = ({
                           style={{
                             boxShadow: "0 2px 16px 0 rgba(0,0,0,0.19)",
                             background: "#18181b",
-                            // add a bit vertical padding so the image doesn't touch the very top/bottom
                             paddingTop: "16px",
                             paddingBottom: "16px",
                           }}
@@ -145,3 +160,4 @@ const LovableDevicePreview = ({
 );
 
 export default LovableDevicePreview;
+
