@@ -78,7 +78,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen text-white overflow-hidden relative">
-      {/* 3D Background - Scaled Zoom */}
+      {/* 3D Background - Further Zoomed In */}
       <div
         className="fixed top-0 left-0 w-full h-full z-0"
         style={{
@@ -90,7 +90,7 @@ const Index = () => {
           style={{
             width: "100vw",
             height: "100vh",
-            transform: "scale(1.6)",
+            transform: "scale(2.0)",
             transformOrigin: "center center",
           }}
         >
