@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Smartphone, Monitor } from "lucide-react";
 import React from "react";
@@ -14,7 +13,7 @@ const playerSiteUrl = "https://penguinplay.bet";
 const agentSiteUrl = "https://penguinagent.com";
 
 const playerDesktopImage = "/lovable-uploads/aa6c961a-afe8-4759-b3a3-baa7bcc39610.png";
-const playerMobileImage = "/lovable-uploads/cb3bf24f-40ca-4a46-9c62-5d511d8ad543.png";
+const playerMobileImage = "/lovable-uploads/fb8686a4-0802-4a08-95c4-32dfcd9c27cd.png";
 
 const LovableDevicePreview = ({
   previewMode,
@@ -160,4 +159,3 @@ const LovableDevicePreview = ({
 );
 
 export default LovableDevicePreview;
-
