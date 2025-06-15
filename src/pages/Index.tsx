@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
-import { Check, Users, Phone, Mail } from "lucide-react";
+import { Check, Users, Phone, Mail, Smartphone, Monitor, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -16,6 +16,9 @@ const Index = () => {
     contactEmail: "",
     phone: ""
   });
+  
+  const [previewMode, setPreviewMode] = useState<'player' | 'agent'>('player');
+  const [deviceMode, setDeviceMode] = useState<'mobile' | 'desktop'>('mobile');
   
   const { toast } = useToast();
 
@@ -32,23 +35,44 @@ const Index = () => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
+  const scrollToSignUp = () => {
+    const signupSection = document.getElementById('signup-section');
+    signupSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const features = [
     "Exclusive Penguin Live TV for sports",
-    "Exclusive Pragmatic casino (NO revenue share, 90% RTP)",
-    "Exclusive Plinko-style casino (Games: HiLo, Plinko, Mines, Towers)",
+    "Exclusive Pragmatic Casino (90% RTP, no revenue share)",
+    "Exclusive Plinko-style games (HiLo, Plinko, Mines, Towers)",
     "Exclusive Poker with custom player sheet",
-    "Live Casino access",
-    "Live Betting access",
-    "Prop Builder tools",
-    "24/7 customer support (Chinese, English, and Spanish)",
+    "+2 Live Casino access",
+    "+2 Live Betting access", 
+    "+2 Prop Builder tools",
+    "24/7 multilingual support (Chinese, English, Spanish)",
     "Sharpest betting lines in the PPH industry",
     "Custom website building included"
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 text-white overflow-hidden">
+      {/* Floating Buttons */}
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col space-y-3">
+        <Button
+          className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300"
+          onClick={() => window.open("https://t.me/yourhandle", "_blank")}
+        >
+          <MessageCircle className="w-6 h-6" />
+        </Button>
+        <Button
+          className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-xl transition-all duration-300"
+          onClick={() => window.open("https://wa.me/yourphonenumber", "_blank")}
+        >
+          <Phone className="w-6 h-6" />
+        </Button>
+      </div>
+
       {/* Navigation */}
-      <nav className="relative z-50 px-6 py-4">
+      <nav className="relative z-40 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
@@ -56,22 +80,29 @@ const Index = () => {
             </div>
             <span className="text-xl font-bold text-green-400">PenguinPPH</span>
           </div>
-          <div className="flex space-x-4">
+          <div className="flex items-center space-x-3">
+            <div className="flex flex-col space-y-1">
+              <Button 
+                variant="outline" 
+                size="sm"
+                className="border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300 text-xs"
+              >
+                PLAYER DEMO
+              </Button>
+              <Button 
+                variant="outline" 
+                size="sm"
+                className="border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300 text-xs"
+              >
+                AGENT DEMO
+              </Button>
+            </div>
             <Button 
-              variant="outline" 
-              className="border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300"
-              onClick={() => window.open("https://t.me/yourhandle", "_blank")}
+              className="bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-black font-bold transition-all duration-300"
+              onClick={scrollToSignUp}
             >
-              <Mail className="w-4 h-4 mr-2" />
-              Telegram
-            </Button>
-            <Button 
-              variant="outline" 
-              className="border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300"
-              onClick={() => window.open("https://wa.me/yourphonenumber", "_blank")}
-            >
-              <Phone className="w-4 h-4 mr-2" />
-              WhatsApp
+              <Users className="w-4 h-4 mr-2" />
+              SIGN UP
             </Button>
           </div>
         </div>
@@ -111,7 +142,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Features Section - Clean List Style */}
       <section className="px-6 py-20">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
@@ -119,30 +150,111 @@ const Index = () => {
             <span className="text-green-400">$5</span>
           </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-              <Card key={index} className="bg-gray-800/50 border-gray-700 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <Check className="w-4 h-4 text-black" />
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-4">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-center text-lg md:text-xl text-gray-300 hover:text-white transition-colors duration-300">
+                  <span className="text-green-400 font-bold mr-4 text-2xl">+</span>
+                  <span>{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Device Preview Section */}
+      <section className="px-6 py-20">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+            See Your Platform in{" "}
+            <span className="text-green-400">Action</span>
+          </h2>
+          
+          <div className="bg-gray-800/50 rounded-2xl p-8 backdrop-blur-sm border border-gray-700">
+            {/* Toggle Controls */}
+            <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
+              <div className="flex bg-gray-700 rounded-lg p-1">
+                <Button
+                  variant={previewMode === 'player' ? 'default' : 'ghost'}
+                  size="sm"
+                  onClick={() => setPreviewMode('player')}
+                  className={previewMode === 'player' ? 'bg-green-500 text-black' : 'text-gray-300'}
+                >
+                  PLAYER SITE
+                </Button>
+                <Button
+                  variant={previewMode === 'agent' ? 'default' : 'ghost'}
+                  size="sm"
+                  onClick={() => setPreviewMode('agent')}
+                  className={previewMode === 'agent' ? 'bg-green-500 text-black' : 'text-gray-300'}
+                >
+                  AGENT SITE
+                </Button>
+              </div>
+              
+              <div className="flex bg-gray-700 rounded-lg p-1">
+                <Button
+                  variant={deviceMode === 'mobile' ? 'default' : 'ghost'}
+                  size="sm"
+                  onClick={() => setDeviceMode('mobile')}
+                  className={deviceMode === 'mobile' ? 'bg-green-500 text-black' : 'text-gray-300'}
+                >
+                  <Smartphone className="w-4 h-4 mr-2" />
+                  MOBILE
+                </Button>
+                <Button
+                  variant={deviceMode === 'desktop' ? 'default' : 'ghost'}
+                  size="sm"
+                  onClick={() => setDeviceMode('desktop')}
+                  className={deviceMode === 'desktop' ? 'bg-green-500 text-black' : 'text-gray-300'}
+                >
+                  <Monitor className="w-4 h-4 mr-2" />
+                  DESKTOP
+                </Button>
+              </div>
+            </div>
+
+            {/* Device Preview */}
+            <div className="flex justify-center">
+              {deviceMode === 'mobile' ? (
+                <div className="relative w-64 h-96 bg-black rounded-3xl p-2 shadow-2xl">
+                  <div className="w-full h-full bg-gray-900 rounded-2xl flex items-center justify-center border border-gray-600">
+                    <div className="text-center">
+                      <div className="text-green-400 text-2xl mb-2">📱</div>
+                      <div className="text-white font-bold">
+                        {previewMode === 'player' ? 'Player Site' : 'Agent Site'}
+                      </div>
+                      <div className="text-gray-400 text-sm mt-2">Mobile Preview</div>
                     </div>
-                    <p className="text-gray-300 leading-relaxed">{feature}</p>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
+                </div>
+              ) : (
+                <div className="relative w-96 h-64 bg-gray-800 rounded-lg p-4 shadow-2xl">
+                  <div className="w-full h-full bg-gray-900 rounded-lg flex items-center justify-center border border-gray-600">
+                    <div className="text-center">
+                      <div className="text-green-400 text-3xl mb-2">💻</div>
+                      <div className="text-white font-bold text-lg">
+                        {previewMode === 'player' ? 'Player Site' : 'Agent Site'}
+                      </div>
+                      <div className="text-gray-400 text-sm mt-2">Desktop Preview</div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Signup Form Section */}
-      <section className="px-6 py-20">
+      <section id="signup-section" className="px-6 py-20">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Start Your PPH Business{" "}
-              <span className="text-green-400">Today</span>
+              Start Your{" "}
+              <span className="text-green-400">SPORTSBOOK</span>{" "}
+              Today
             </h2>
             <p className="text-xl text-gray-300">
               Join thousands of successful agents making money with our platform
@@ -252,7 +364,7 @@ const Index = () => {
                   className="w-full bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-black font-bold py-4 text-lg transition-all duration-300 hover:scale-105"
                 >
                   <Users className="w-5 h-5 mr-2" />
-                  START MY PPH BUSINESS NOW
+                  START MY SPORTSBOOK BUSINESS NOW
                 </Button>
               </form>
             </CardContent>
