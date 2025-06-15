@@ -79,25 +79,26 @@ const LovableDevicePreview = ({
               {/* iPhone 16 Mockup */}
               <div className="w-72 h-[600px] bg-black rounded-[3rem] shadow-2xl border-4 border-gray-800 flex items-center justify-center p-0">
                 <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-full z-10" />
-                {/* This is the phone screen area */}
-                <div className="w-[256px] h-[544px] rounded-[2.5rem] overflow-hidden flex items-center justify-center" style={{background: "red"}}> {/* TEMP debug color */}
+                {/* Phone screen area - NO RED, NO EXTRA PADDING, NO BG */}
+                <div className="w-[256px] h-[544px] rounded-[2.5rem] overflow-hidden flex items-center justify-center relative">
                   {previewMode === "player" ? (
                     <img
                       src={playerMobileImage}
                       alt="Player Mobile Site"
-                      className="w-full h-full object-cover rounded-[2.1rem]"
+                      className="w-full h-full object-cover rounded-[2.5rem]"
                       style={{
+                        display: 'block',
+                        background: "#18181b", // fallback only
                         margin: 0,
                         padding: 0,
-                        boxShadow: "0 2px 8px 0 rgba(0,0,0,0.10)",
-                        background: "#18181b"
+                        boxShadow: "0 2px 8px 0 rgba(0,0,0,0.10)"
                       }}
                     />
                   ) : (
                     <iframe
                       src={agentSiteUrl}
                       title="Agent Mobile Site"
-                      className="w-full h-full rounded-[2.1rem] bg-transparent"
+                      className="w-full h-full rounded-[2.5rem] bg-transparent"
                       style={{
                         border: "none",
                         objectFit: "cover",
@@ -107,7 +108,7 @@ const LovableDevicePreview = ({
                     />
                   )}
                   {/* Bottom gradient overlay */}
-                  <div className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-black/30 to-transparent rounded-b-[2.1rem] pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-black/30 to-transparent rounded-b-[2.5rem] pointer-events-none" />
                 </div>
               </div>
             </div>
