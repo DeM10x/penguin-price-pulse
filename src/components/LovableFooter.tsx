@@ -13,6 +13,15 @@ const LovableFooter = () => (
       <p className="text-gray-400 mb-4">
         The most competitive PPH platform in the industry
       </p>
+      <div className="flex justify-center space-x-8 mb-6">
+        <Button 
+          variant="ghost" 
+          className="text-green-400 hover:text-white"
+          onClick={() => window.open("/how-it-works", "_blank")}
+        >
+          How does it work?
+        </Button>
+      </div>
       <div className="flex justify-center space-x-8">
         <Button 
           variant="ghost" 
