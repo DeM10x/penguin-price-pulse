@@ -1,0 +1,73 @@
+
+{
+  "navbar": {
+    "howItWorks": "How does it work?",
+    "playerDemo": "PLAYER DEMO",
+    "agentDemo": "AGENT DEMO",
+    "signUp": "SIGN UP"
+  },
+  "hero": {
+    "title": "The most competitive PPH platform in the industry",
+    "subtitle": "Start your sportsbook business today"
+  },
+  "howItWorks": {
+    "title": "What Is a Sportsbook Pay Per Head (PPH) Software?",
+    "subtitle": "A powerful online platform that allows independent bookmakers to run their own sportsbook business",
+    "description": "A Sportsbook Pay Per Head (PPH) software is a powerful online platform that allows independent bookmakers (also known as \"agents\") to run their own sportsbook business without needing to build a website, manage betting odds, or deal with technical operations.",
+    "howItWorksTitle": "🔍 How It Works (Beginner-Friendly)",
+    "howItWorksDesc": "Imagine you're someone who wants to start your own online sportsbook—like a small betting site—but you don't have the tools, the tech team, or the resources to manage everything yourself.",
+    "howItWorksDesc2": "That's where our PPH software comes in. We provide the full system for you.",
+    "youGetTitle": "You get:",
+    "youGetItems": [
+      "Your own private website (with a custom design if you want)",
+      "Access to a fully working sportsbook platform",
+      "24/7 updated betting lines on sports, casino games, and more",
+      "A back-end dashboard where you can manage your players, set limits, track balances, and view reports"
+    ],
+    "profitsTitle": "💰 You Keep 100% of the Profits",
+    "profitsDesc": "You act as the bookmaker for your own players. That means:",
+    "profitsItems": [
+      "You decide who to give accounts to",
+      "You set the credit/limits for each player",
+      "You control their wins and losses",
+      "Whatever your players lose, you keep as profit",
+      "Whatever they win, you pay them out"
+    ],
+    "feeNote": "📌 Our only fee is $5 per active player per week.",
+    "feeNote2": "If a player doesn't bet that week, you don't pay for them.",
+    "exampleTitle": "🎯 Example",
+    "exampleDesc": "Let's say you have 10 active players this week:",
+    "exampleItems": [
+      "We charge you: 10 x $5 = $50",
+      "If your players lose $2,000 that week, you keep all $2,000",
+      "Your only cost was the $50 fee"
+    ],
+    "exampleConclusion": "This gives you a very low-cost, high-profit model to run your own betting business.",
+    "whyChooseTitle": "✅ Why Choose Our PPH Software?",
+    "whyChooseItems": [
+      "No technical skills needed",
+      "Custom branding available",
+      "Real-time reporting",
+      "Fully mobile-friendly platform",
+      "Live casino add-ons",
+      "Virtual sports & horse racing"
+    ],
+    "whoIsThisForTitle": "👤 Who Is This For?",
+    "whoIsThisForItems": [
+      "People who already take bets manually and want to go online",
+      "Anyone who wants to start a small sportsbook business and grow",
+      "Experienced agents looking for a better, more affordable platform"
+    ],
+    "finalThoughtsTitle": "💬 Final Thoughts",
+    "finalThoughtsDesc": "Our goal is to empower independent bookies with all the tools they need to run a professional, secure, and profitable sportsbook. You get the full setup, support, and features — and you only pay per active player, no large monthly fees, no hidden charges.",
+    "readyTitle": "Ready to Get Started?",
+    "readySubtitle": "Join hundreds of successful agents already using PenguinPPH",
+    "telegramContact": "Contact on Telegram",
+    "whatsappContact": "Contact on WhatsApp"
+  },
+  "footer": {
+    "tagline": "The most competitive PPH platform in the industry",
+    "telegramSupport": "Telegram Support",
+    "whatsappSupport": "WhatsApp Support"
+  }
+}

@@ -1,0 +1,73 @@
+
+{
+  "navbar": {
+    "howItWorks": "如何运作？",
+    "playerDemo": "玩家演示",
+    "agentDemo": "代理演示",
+    "signUp": "注册"
+  },
+  "hero": {
+    "title": "业内最具竞争力的PPH平台",
+    "subtitle": "今天就开始您的体育博彩业务"
+  },
+  "howItWorks": {
+    "title": "什么是体育博彩按人头付费(PPH)软件？",
+    "subtitle": "一个强大的在线平台，允许独立博彩公司经营自己的体育博彩业务",
+    "description": "体育博彩按人头付费(PPH)软件是一个强大的在线平台，允许独立博彩公司（也称为"代理"）经营自己的体育博彩业务，无需建立网站、管理投注赔率或处理技术操作。",
+    "howItWorksTitle": "🔍 运作方式（新手友好）",
+    "howItWorksDesc": "想象您是想要开始自己的在线体育博彩——像一个小型投注网站——但您没有工具、技术团队或资源来管理一切。",
+    "howItWorksDesc2": "这就是我们PPH软件的用武之地。我们为您提供完整的系统。",
+    "youGetTitle": "您将获得：",
+    "youGetItems": [
+      "您自己的私人网站（如果需要可以定制设计）",
+      "访问完全功能的体育博彩平台",
+      "24/7更新的体育、赌场游戏等投注线",
+      "后台仪表板，您可以管理玩家、设置限制、跟踪余额和查看报告"
+    ],
+    "profitsTitle": "💰 您保留100%的利润",
+    "profitsDesc": "您为自己的玩家充当博彩公司。这意味着：",
+    "profitsItems": [
+      "您决定给谁开账户",
+      "您为每个玩家设置信用/限制",
+      "您控制他们的输赢",
+      "玩家输的钱，您作为利润保留",
+      "他们赢的钱，您支付给他们"
+    ],
+    "feeNote": "📌 我们唯一的费用是每个活跃玩家每周5美元。",
+    "feeNote2": "如果玩家那周不下注，您就不需要为他们付费。",
+    "exampleTitle": "🎯 示例",
+    "exampleDesc": "假设您这周有10个活跃玩家：",
+    "exampleItems": [
+      "我们收费：10 x $5 = $50",
+      "如果您的玩家那周输了$2,000，您保留全部$2,000",
+      "您唯一的成本是$50费用"
+    ],
+    "exampleConclusion": "这为您提供了一个非常低成本、高利润的模式来经营自己的投注业务。",
+    "whyChooseTitle": "✅ 为什么选择我们的PPH软件？",
+    "whyChooseItems": [
+      "不需要技术技能",
+      "可定制品牌",
+      "实时报告",
+      "完全移动友好的平台",
+      "真人赌场附加功能",
+      "虚拟体育和赛马"
+    ],
+    "whoIsThisForTitle": "👤 这适合谁？",
+    "whoIsThisForItems": [
+      "已经手动接受投注并想要上线的人",
+      "任何想要开始小型体育博彩业务并发展的人",
+      "寻找更好、更实惠平台的有经验代理"
+    ],
+    "finalThoughtsTitle": "💬 最后的想法",
+    "finalThoughtsDesc": "我们的目标是为独立博彩公司提供运营专业、安全和盈利的体育博彩所需的所有工具。您获得完整的设置、支持和功能——您只需按活跃玩家付费，没有大额月费，没有隐藏费用。",
+    "readyTitle": "准备开始了吗？",
+    "readySubtitle": "加入已经在使用PenguinPPH的数百名成功代理",
+    "telegramContact": "通过Telegram联系",
+    "whatsappContact": "通过WhatsApp联系"
+  },
+  "footer": {
+    "tagline": "业内最具竞争力的PPH平台",
+    "telegramSupport": "Telegram支持",
+    "whatsappSupport": "WhatsApp支持"
+  }
+}

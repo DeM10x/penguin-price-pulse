@@ -1,7 +1,11 @@
 
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Users } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useMobile } from "@/hooks/use-mobile";
+import LanguageSelector from "./LanguageSelector";
+import HowItWorksSheet from "./HowItWorksSheet";
 
 type NavbarProps = {
   scrollToSignUp: () => void;
@@ -12,6 +16,8 @@ const PLAYER_SITE_URL = "https://penguinplay.bet";
 
 const LovableNavbar = ({ scrollToSignUp }: NavbarProps) => {
   const { toast } = useToast();
+  const { t } = useTranslation();
+  const isMobile = useMobile();
 
   // POST login and redirect on success
   const handlePlayerDemo = async () => {
@@ -70,15 +76,25 @@ const LovableNavbar = ({ scrollToSignUp }: NavbarProps) => {
             </div>
             <span className="text-xl font-bold text-green-400">PenguinPPH</span>
           </div>
-          <Button 
-            variant="ghost" 
-            className="text-green-400 hover:text-white"
-            onClick={() => window.open("/how-it-works", "_blank")}
-          >
-            How does it work?
-          </Button>
+          
+          {/* Desktop: Regular button, Mobile: Sheet */}
+          {isMobile ? (
+            <HowItWorksSheet />
+          ) : (
+            <Button 
+              variant="ghost" 
+              className="text-green-400 hover:text-white"
+              onClick={() => window.open("/how-it-works", "_blank")}
+            >
+              {t('navbar.howItWorks')}
+            </Button>
+          )}
         </div>
+        
         <div className="flex items-center space-x-3">
+          {/* Language Selector */}
+          <LanguageSelector />
+          
           <div className="flex flex-col space-y-1">
             <Button 
               variant="outline" 
@@ -86,7 +102,7 @@ const LovableNavbar = ({ scrollToSignUp }: NavbarProps) => {
               className="border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300 text-xs"
               onClick={handlePlayerDemo}
             >
-              PLAYER DEMO
+              {t('navbar.playerDemo')}
             </Button>
             <Button 
               variant="outline" 
@@ -94,7 +110,7 @@ const LovableNavbar = ({ scrollToSignUp }: NavbarProps) => {
               className="border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300 text-xs"
               // If you want, add an equivalent handler for Agent Demo here!
             >
-              AGENT DEMO
+              {t('navbar.agentDemo')}
             </Button>
           </div>
           <Button 
@@ -102,7 +118,7 @@ const LovableNavbar = ({ scrollToSignUp }: NavbarProps) => {
             onClick={scrollToSignUp}
           >
             <Users className="w-4 h-4 mr-2" />
-            SIGN UP
+            {t('navbar.signUp')}
           </Button>
         </div>
       </div>

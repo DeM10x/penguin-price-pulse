@@ -1,0 +1,73 @@
+
+{
+  "navbar": {
+    "howItWorks": "¿Cómo funciona?",
+    "playerDemo": "DEMO JUGADOR",
+    "agentDemo": "DEMO AGENTE",
+    "signUp": "REGISTRARSE"
+  },
+  "hero": {
+    "title": "La plataforma PPH más competitiva de la industria",
+    "subtitle": "Inicia tu negocio de casa de apuestas hoy"
+  },
+  "howItWorks": {
+    "title": "¿Qué es un Software de Casa de Apuestas Pay Per Head (PPH)?",
+    "subtitle": "Una plataforma online poderosa que permite a corredores independientes manejar su propio negocio de casa de apuestas",
+    "description": "Un software de Casa de Apuestas Pay Per Head (PPH) es una plataforma online poderosa que permite a corredores independientes (también conocidos como \"agentes\") manejar su propio negocio de casa de apuestas sin necesidad de construir un sitio web, manejar cuotas de apuestas, o lidiar con operaciones técnicas.",
+    "howItWorksTitle": "🔍 Cómo Funciona (Fácil de Entender)",
+    "howItWorksDesc": "Imagina que eres alguien que quiere comenzar su propia casa de apuestas online—como un pequeño sitio de apuestas—pero no tienes las herramientas, el equipo técnico, o los recursos para manejar todo por ti mismo.",
+    "howItWorksDesc2": "Ahí es donde nuestro software PPH entra. Te proporcionamos el sistema completo.",
+    "youGetTitle": "Obtienes:",
+    "youGetItems": [
+      "Tu propio sitio web privado (con diseño personalizado si quieres)",
+      "Acceso a una plataforma de casa de apuestas completamente funcional",
+      "Líneas de apuestas actualizadas 24/7 en deportes, juegos de casino y más",
+      "Un panel de control donde puedes manejar tus jugadores, establecer límites, rastrear balances y ver reportes"
+    ],
+    "profitsTitle": "💰 Te Quedas con el 100% de las Ganancias",
+    "profitsDesc": "Actúas como la casa de apuestas para tus propios jugadores. Eso significa:",
+    "profitsItems": [
+      "Tú decides a quién dar cuentas",
+      "Estableces el crédito/límites para cada jugador",
+      "Controlas sus ganancias y pérdidas",
+      "Lo que tus jugadores pierdan, tú lo mantienes como ganancia",
+      "Lo que ganen, tú se lo pagas"
+    ],
+    "feeNote": "📌 Nuestra única tarifa es $5 por jugador activo por semana.",
+    "feeNote2": "Si un jugador no apuesta esa semana, no pagas por él.",
+    "exampleTitle": "🎯 Ejemplo",
+    "exampleDesc": "Digamos que tienes 10 jugadores activos esta semana:",
+    "exampleItems": [
+      "Te cobramos: 10 x $5 = $50",
+      "Si tus jugadores pierden $2,000 esa semana, te quedas con todos los $2,000",
+      "Tu único costo fue la tarifa de $50"
+    ],
+    "exampleConclusion": "Esto te da un modelo de muy bajo costo y alta ganancia para manejar tu propio negocio de apuestas.",
+    "whyChooseTitle": "✅ ¿Por Qué Elegir Nuestro Software PPH?",
+    "whyChooseItems": [
+      "No se necesitan habilidades técnicas",
+      "Marca personalizada disponible",
+      "Reportes en tiempo real",
+      "Plataforma completamente amigable para móviles",
+      "Complementos de casino en vivo",
+      "Deportes virtuales y carreras de caballos"
+    ],
+    "whoIsThisForTitle": "👤 ¿Para Quién Es Esto?",
+    "whoIsThisForItems": [
+      "Personas que ya toman apuestas manualmente y quieren ir online",
+      "Cualquiera que quiera comenzar un pequeño negocio de casa de apuestas y crecer",
+      "Agentes experimentados buscando una plataforma mejor y más asequible"
+    ],
+    "finalThoughtsTitle": "💬 Pensamientos Finales",
+    "finalThoughtsDesc": "Nuestro objetivo es empoderar a corredores independientes con todas las herramientas que necesitan para manejar una casa de apuestas profesional, segura y rentable. Obtienes la configuración completa, soporte y características — y solo pagas por jugador activo, sin grandes tarifas mensuales, sin cargos ocultos.",
+    "readyTitle": "¿Listo para Comenzar?",
+    "readySubtitle": "Únete a cientos de agentes exitosos que ya usan PenguinPPH",
+    "telegramContact": "Contactar en Telegram",
+    "whatsappContact": "Contactar en WhatsApp"
+  },
+  "footer": {
+    "tagline": "La plataforma PPH más competitiva de la industria",
+    "telegramSupport": "Soporte Telegram",
+    "whatsappSupport": "Soporte WhatsApp"
+  }
+}
