@@ -13,7 +13,9 @@ import { ChevronDown, Globe } from 'lucide-react';
 const languages = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
   { code: 'es', name: 'Español', flag: '🇪🇸' },
-  { code: 'zh', name: '中文', flag: '🇨🇳' },
+  { code: 'zh', name: '中文 (简体)', flag: '🇨🇳' },
+  { code: 'zh-hk', name: '粵語 (繁體)', flag: '🇭🇰' },
+  { code: 'pt', name: 'Português', flag: '🇵🇹' },
 ];
 
 const LanguageSelector = () => {

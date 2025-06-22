@@ -1,0 +1,141 @@
+
+{
+  "navbar": {
+    "howItWorks": "Como funciona?",
+    "playerDemo": "DEMO JOGADOR",
+    "agentDemo": "DEMO AGENTE",
+    "signUp": "CADASTRAR-SE"
+  },
+  "hero": {
+    "title": "DESBLOQUEIE O MELHOR",
+    "titleHighlight": "NEGÓCIO PPH",
+    "titleEnd": "DA INDÚSTRIA",
+    "priceLabel": "APENAS",
+    "price": "$7",
+    "priceDetails": "POR JOGADOR ATIVO/SEMANA",
+    "subtitle": "Experimente os preços mais competitivos da indústria com recursos premium que o distinguem da concorrência."
+  },
+  "features": {
+    "title": "Tudo Incluído por",
+    "price": "$7",
+    "addOnsTitle": "COMPLEMENTOS POSSÍVEIS",
+    "exclusiveFeaturesTitle": "Recursos Exclusivos Penguin",
+    "includedFeatures": [
+      "Acesso completo às apostas pré-jogo em todos os esportes principais",
+      "Acesso completo às apostas AO VIVO em todos os esportes principais",
+      "Jogos de cassino premium com gráficos de alta qualidade e performance",
+      "Acesso exclusivo a mesas de pôquer privadas para uma experiência VIP",
+      "Transmissão ao vivo dos principais eventos esportivos diretamente na plataforma",
+      "Suporte dedicado de agente 24/7 para auxiliar nas operações",
+      "Suporte de apostas 24/7 para atividade ininterrupta dos jogadores",
+      "Configuração de grupo privado no Telegram e WhatsApp para suporte de agente",
+      "Acesso completo às ferramentas de gestão de agente para controle total e flexibilidade"
+    ],
+    "addOns": [
+      {
+        "name": "Construtor de Props",
+        "description": "Adicionar por $2 por cabeça"
+      },
+      {
+        "name": "Cassino ao Vivo (jogos de dealer)",
+        "description": "Adicionar por $1 por cabeça"
+      },
+      {
+        "name": "Plataforma Premium de Apostas em Cavalos",
+        "description": "Adicionar por $2 por cabeça"
+      }
+    ],
+    "penguinFeatures": [
+      {
+        "title": "Todos os Esportes Principais"
+      },
+      {
+        "title": "Cassinos Exclusivos Plinko/Pragmatic"
+      }
+    ]
+  },
+  "signup": {
+    "title": "Inicie Sua",
+    "titleHighlight": "CASA DE APOSTAS",
+    "titleEnd": "Hoje",
+    "subtitle": "Junte-se a milhares de agentes bem-sucedidos ganhando dinheiro com nossa plataforma",
+    "form": {
+      "email": "Endereço de E-mail",
+      "emailPlaceholder": "seu@email.com",
+      "username": "Nome de Usuário de Agente Desejado",
+      "usernamePlaceholder": "usuario_agente",
+      "password": "Senha",
+      "passwordPlaceholder": "••••••••",
+      "playerCount": "Número Estimado de Jogadores",
+      "playerCountPlaceholder": "50",
+      "contactEmail": "E-mail de Contato",
+      "contactEmailPlaceholder": "contato@email.com",
+      "phone": "Número de Telefone (Opcional)",
+      "phonePlaceholder": "+1 (555) 123-4567",
+      "required": "*",
+      "submitButton": "INICIAR MEU NEGÓCIO DE CASA DE APOSTAS AGORA",
+      "successTitle": "Cadastro Enviado!",
+      "successMessage": "Entraremos em contato em até 24 horas para configurar sua conta."
+    }
+  },
+  "howItWorks": {
+    "title": "O que é um Software de Casa de Apostas Pay Per Head (PPH)?",
+    "subtitle": "Uma plataforma online poderosa que permite a corretores independentes administrar seu próprio negócio de casa de apostas",
+    "description": "Um software de Casa de Apostas Pay Per Head (PPH) é uma plataforma online poderosa que permite a corretores independentes (também conhecidos como \"agentes\") administrar seu próprio negócio de casa de apostas sem precisar construir um site, gerenciar odds de apostas ou lidar com operações técnicas.",
+    "howItWorksTitle": "🔍 Como Funciona (Amigável para Iniciantes)",
+    "howItWorksDesc": "Imagine que você é alguém que quer começar sua própria casa de apostas online—como um pequeno site de apostas—mas você não tem as ferramentas, a equipe técnica ou os recursos para gerenciar tudo sozinho.",
+    "howItWorksDesc2": "É aí que nosso software PPH entra. Fornecemos o sistema completo para você.",
+    "youGetTitle": "Você recebe:",
+    "youGetItems": [
+      "Seu próprio site privado (com design personalizado se desejar)",
+      "Acesso a uma plataforma de casa de apostas totalmente funcional",
+      "Linhas de apostas atualizadas 24/7 em esportes, jogos de cassino e mais",
+      "Um painel de controle onde você pode gerenciar seus jogadores, definir limites, rastrear saldos e visualizar relatórios"
+    ],
+    "profitsTitle": "💰 Você Mantém 100% dos Lucros",
+    "profitsDesc": "Você atua como a casa de apostas para seus próprios jogadores. Isso significa:",
+    "profitsItems": [
+      "Você decide a quem dar contas",
+      "Você define o crédito/limites para cada jogador",
+      "Você controla suas vitórias e perdas",
+      "O que seus jogadores perdem, você mantém como lucro",
+      "O que eles ganham, você paga a eles"
+    ],
+    "feeNote": "📌 Nossa única taxa é $5 por jogador ativo por semana.",
+    "feeNote2": "Se um jogador não apostar naquela semana, você não paga por ele.",
+    "exampleTitle": "🎯 Exemplo",
+    "exampleDesc": "Digamos que você tenha 10 jogadores ativos esta semana:",
+    "exampleItems": [
+      "Cobramos de você: 10 x $5 = $50",
+      "Se seus jogadores perderem $2.000 naquela semana, você mantém todos os $2.000",
+      "Seu único custo foi a taxa de $50"
+    ],
+    "exampleConclusion": "Isso lhe dá um modelo de muito baixo custo e alto lucro para administrar seu próprio negócio de apostas.",
+    "whyChooseTitle": "✅ Por que Escolher Nosso Software PPH?",
+    "whyChooseItems": [
+      "Não são necessárias habilidades técnicas",
+      "Marca personalizada disponível",
+      "Relatórios em tempo real",
+      "Plataforma totalmente amigável para dispositivos móveis",
+      "Complementos de cassino ao vivo",
+      "Esportes virtuais e corridas de cavalos"
+    ],
+    "whoIsThisForTitle": "👤 Para Quem É Isso?",
+    "whoIsThisForItems": [
+      "Pessoas que já aceitam apostas manualmente e querem ir online",
+      "Qualquer um que queira começar um pequeno negócio de casa de apostas e crescer",
+      "Agentes experientes procurando uma plataforma melhor e mais acessível"
+    ],
+    "finalThoughtsTitle": "💬 Considerações Finais",
+    "finalThoughtsDesc": "Nosso objetivo é capacitar corretores independentes com todas as ferramentas necessárias para administrar uma casa de apostas profissional, segura e lucrativa. Você recebe a configuração completa, suporte e recursos — e paga apenas por jogador ativo, sem grandes taxas mensais, sem cobrança ocultas.",
+    "readyTitle": "Pronto para Começar?",
+    "readySubtitle": "Junte-se a centenas de agentes bem-sucedidos que já usam PenguinPPH",
+    "telegramContact": "Contatar no Telegram",
+    "whatsappContact": "Contatar no WhatsApp"
+  },
+  "footer": {
+    "tagline": "A plataforma PPH mais competitiva da indústria",
+    "telegramSupport": "Suporte Telegram",
+    "whatsappSupport": "Suporte WhatsApp"
+  }
+}

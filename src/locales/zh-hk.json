@@ -1,0 +1,141 @@
+
+{
+  "navbar": {
+    "howItWorks": "點樣運作？",
+    "playerDemo": "玩家演示",
+    "agentDemo": "代理演示",
+    "signUp": "註冊"
+  },
+  "hero": {
+    "title": "解鎖業內最好嘅",
+    "titleHighlight": "PPH交易",
+    "titleEnd": "喺呢個行業",
+    "priceLabel": "淨係要",
+    "price": "$7",
+    "priceDetails": "每個活躍玩家/週",
+    "subtitle": "體驗業內最有競爭力嘅定價，擁有令你脫穎而出嘅高端功能。"
+  },
+  "features": {
+    "title": "所有功能淨係要",
+    "price": "$7",
+    "addOnsTitle": "可能嘅附加功能",
+    "exclusiveFeaturesTitle": "企鵝專屬功能",
+    "includedFeatures": [
+      "完全使用所有主要體育項目嘅賽前投注",
+      "完全使用所有主要體育項目嘅實時投注",
+      "具有高質量圖形同性能嘅高級賭場老虎機遊戲",
+      "獨家使用私人撲克枱以獲得VIP體驗",
+      "直接喺平台上觀看頂級體育賽事直播",
+      "24/7專屬代理支援協助運營",
+      "24/7投注支援確保不間斷嘅玩家活動",
+      "私人Telegram同WhatsApp群組設置以獲得代理支援",
+      "完全使用代理管理工具以獲得完全控制同靈活性"
+    ],
+    "addOns": [
+      {
+        "name": "道具構建器",
+        "description": "每人增加$2"
+      },
+      {
+        "name": "真人賭場（荷官遊戲）",
+        "description": "每人增加$1"
+      },
+      {
+        "name": "高級賽馬投注平台",
+        "description": "每人增加$2"
+      }
+    ],
+    "penguinFeatures": [
+      {
+        "title": "所有主要體育項目"
+      },
+      {
+        "title": "獨家賭場Plinko/Pragmatic"
+      }
+    ]
+  },
+  "signup": {
+    "title": "今日開始你嘅",
+    "titleHighlight": "體育博彩",
+    "titleEnd": "業務",
+    "subtitle": "加入數千名使用我哋平台賺錢嘅成功代理",
+    "form": {
+      "email": "電子郵件地址",
+      "emailPlaceholder": "你嘅@email.com",
+      "username": "期望嘅代理用戶名",
+      "usernamePlaceholder": "代理_用戶名",
+      "password": "密碼",
+      "passwordPlaceholder": "••••••••",
+      "playerCount": "預計玩家數量",
+      "playerCountPlaceholder": "50",
+      "contactEmail": "聯繫郵箱",
+      "contactEmailPlaceholder": "聯繫@email.com",
+      "phone": "電話號碼（可選）",
+      "phonePlaceholder": "+1 (555) 123-4567",
+      "required": "*",
+      "submitButton": "立即開始我嘅體育博彩業務",
+      "successTitle": "註冊已提交！",
+      "successMessage": "我哋將喺24小時內聯繫你設置你嘅賬戶。"
+    }
+  },
+  "howItWorks": {
+    "title": "咩係體育博彩按人頭付費(PPH)軟件？",
+    "subtitle": "一個強大嘅在線平台，允許獨立博彩公司經營自己嘅體育博彩業務",
+    "description": "體育博彩按人頭付費(PPH)軟件係一個強大嘅在線平台，允許獨立博彩公司（也稱為代理）經營自己嘅體育博彩業務，無需建立網站、管理投注賠率或處理技術操作。",
+    "howItWorksTitle": "🔍 運作方式（新手友好）",
+    "howItWorksDesc": "想像你係想要開始自己嘅在線體育博彩——好似一個小型投注網站——但你冇工具、技術團隊或資源嚟管理一切。",
+    "howItWorksDesc2": "呢個就係我哋PPH軟件嘅用武之地。我哋為你提供完整嘅系統。",
+    "youGetTitle": "你將獲得：",
+    "youGetItems": [
+      "你自己嘅私人網站（如果需要可以定制設計）",
+      "使用完全功能嘅體育博彩平台",
+      "24/7更新嘅體育、賭場遊戲等投注線",
+      "後台儀表板，你可以管理玩家、設置限制、跟踪餘額同查看報告"
+    ],
+    "profitsTitle": "💰 你保留100%嘅利潤",
+    "profitsDesc": "你為自己嘅玩家充當博彩公司。呢個意味住：",
+    "profitsItems": [
+      "你決定俾邊個開賬戶",
+      "你為每個玩家設置信用/限制",
+      "你控制佢哋嘅輸贏",
+      "玩家輸嘅錢，你作為利潤保留",
+      "佢哋贏嘅錢，你支付俾佢哋"
+    ],
+    "feeNote": "📌 我哋唯一嘅費用係每個活躍玩家每週5美元。",
+    "feeNote2": "如果玩家嗰週唔下注，你就唔需要為佢哋付費。",
+    "exampleTitle": "🎯 示例",
+    "exampleDesc": "假設你呢週有10個活躍玩家：",
+    "exampleItems": [
+      "我哋收費：10 x $5 = $50",
+      "如果你嘅玩家嗰週輸咗$2,000，你保留全部$2,000",
+      "你唯一嘅成本係$50費用"
+    ],
+    "exampleConclusion": "呢個為你提供咗一個非常低成本、高利潤嘅模式嚟經營自己嘅投注業務。",
+    "whyChooseTitle": "✅ 點解選擇我哋嘅PPH軟件？",
+    "whyChooseItems": [
+      "唔需要技術技能",
+      "可定制品牌",
+      "實時報告",
+      "完全移動友好嘅平台",
+      "真人賭場附加功能",
+      "虛擬體育同賽馬"
+    ],
+    "whoIsThisForTitle": "👤 呢個適合邊個？",
+    "whoIsThisForItems": [
+      "已經手動接受投注並想要上線嘅人",
+      "任何想要開始小型體育博彩業務並發展嘅人",
+      "尋找更好、更實惠平台嘅有經驗代理"
+    ],
+    "finalThoughtsTitle": "💬 最後嘅想法",
+    "finalThoughtsDesc": "我哋嘅目標係為獨立博彩公司提供運營專業、安全同盈利嘅體育博彩所需嘅所有工具。你獲得完整嘅設置、支援同功能——你只需按活躍玩家付費，冇大額月費，冇隱藏費用。",
+    "readyTitle": "準備開始了嗎？",
+    "readySubtitle": "加入已經喺使用PenguinPPH嘅數百名成功代理",
+    "telegramContact": "通過Telegram聯繫",
+    "whatsappContact": "通過WhatsApp聯繫"
+  },
+  "footer": {
+    "tagline": "業內最具競爭力嘅PPH平台",
+    "telegramSupport": "Telegram支援",
+    "whatsappSupport": "WhatsApp支援"
+  }
+}
