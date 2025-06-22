@@ -48,7 +48,7 @@ const HowItWorks = () => {
               </p>
               <h3 className="text-xl font-semibold text-white mb-3">{t('howItWorks.youGetTitle')}</h3>
               <ul className="list-disc list-inside space-y-2 text-gray-300">
-                {t('howItWorks.youGetItems', { returnObjects: true }).map((item: string, index: number) => (
+                {(t('howItWorks.youGetItems', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -58,7 +58,7 @@ const HowItWorks = () => {
               <h2 className="text-2xl font-bold text-green-400 mb-4">{t('howItWorks.profitsTitle')}</h2>
               <p className="text-gray-300 mb-4">{t('howItWorks.profitsDesc')}</p>
               <ul className="list-disc list-inside space-y-2 text-gray-300 mb-4">
-                {t('howItWorks.profitsItems', { returnObjects: true }).map((item: string, index: number) => (
+                {(t('howItWorks.profitsItems', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -76,7 +76,7 @@ const HowItWorks = () => {
               <h2 className="text-2xl font-bold text-green-400 mb-4">{t('howItWorks.exampleTitle')}</h2>
               <p className="text-gray-300 mb-3">{t('howItWorks.exampleDesc')}</p>
               <ul className="list-disc list-inside space-y-2 text-gray-300 mb-4">
-                {t('howItWorks.exampleItems', { returnObjects: true }).map((item: string, index: number) => (
+                {(t('howItWorks.exampleItems', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
@@ -88,7 +88,7 @@ const HowItWorks = () => {
             <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-gray-700">
               <h2 className="text-2xl font-bold text-green-400 mb-4">{t('howItWorks.whyChooseTitle')}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {t('howItWorks.whyChooseItems', { returnObjects: true }).map((item: string, index: number) => (
+                {(t('howItWorks.whyChooseItems', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                   <div key={index} className="flex items-center space-x-2">
                     <span className="text-green-400">✅</span>
                     <span className="text-gray-300">{item}</span>
@@ -100,7 +100,7 @@ const HowItWorks = () => {
             <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 border border-gray-700">
               <h2 className="text-2xl font-bold text-green-400 mb-4">{t('howItWorks.whoIsThisForTitle')}</h2>
               <ul className="list-disc list-inside space-y-2 text-gray-300">
-                {t('howItWorks.whoIsThisForItems', { returnObjects: true }).map((item: string, index: number) => (
+                {(t('howItWorks.whoIsThisForItems', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>

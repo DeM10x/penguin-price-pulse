@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Users } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { useMobile } from "@/hooks/use-mobile";
+import { useIsMobile } from "@/hooks/use-mobile";
 import LanguageSelector from "./LanguageSelector";
 import HowItWorksSheet from "./HowItWorksSheet";
 
@@ -17,7 +17,7 @@ const PLAYER_SITE_URL = "https://penguinplay.bet";
 const LovableNavbar = ({ scrollToSignUp }: NavbarProps) => {
   const { toast } = useToast();
   const { t } = useTranslation();
-  const isMobile = useMobile();
+  const isMobile = useIsMobile();
 
   // POST login and redirect on success
   const handlePlayerDemo = async () => {

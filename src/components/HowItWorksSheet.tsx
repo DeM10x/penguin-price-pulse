@@ -53,7 +53,7 @@ const HowItWorksSheet = () => {
             </p>
             <h4 className="text-white font-semibold mb-2">{t('howItWorks.youGetTitle')}</h4>
             <ul className="list-disc list-inside space-y-1 text-gray-300 text-sm">
-              {t('howItWorks.youGetItems', { returnObjects: true }).map((item: string, index: number) => (
+              {(t('howItWorks.youGetItems', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
@@ -65,7 +65,7 @@ const HowItWorksSheet = () => {
             </h3>
             <p className="text-gray-300 mb-3 text-sm">{t('howItWorks.profitsDesc')}</p>
             <ul className="list-disc list-inside space-y-1 text-gray-300 text-sm mb-3">
-              {t('howItWorks.profitsItems', { returnObjects: true }).map((item: string, index: number) => (
+              {(t('howItWorks.profitsItems', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
@@ -85,7 +85,7 @@ const HowItWorksSheet = () => {
             </h3>
             <p className="text-gray-300 mb-2 text-sm">{t('howItWorks.exampleDesc')}</p>
             <ul className="list-disc list-inside space-y-1 text-gray-300 text-sm mb-3">
-              {t('howItWorks.exampleItems', { returnObjects: true }).map((item: string, index: number) => (
+              {(t('howItWorks.exampleItems', { returnObjects: true }) as string[]).map((item: string, index: number) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
