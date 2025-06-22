@@ -7,8 +7,76 @@
     "signUp": "SIGN UP"
   },
   "hero": {
-    "title": "The most competitive PPH platform in the industry",
-    "subtitle": "Start your sportsbook business today"
+    "title": "UNLOCK THE BEST",
+    "titleHighlight": "PPH DEAL",
+    "titleEnd": "IN THE INDUSTRY",
+    "priceLabel": "JUST",
+    "price": "$7",
+    "priceDetails": "PER ACTIVE PLAYER/WEEK",
+    "subtitle": "Experience the most competitive pricing in the industry with premium features that set you apart from the competition."
+  },
+  "features": {
+    "title": "Everything Included for",
+    "price": "$7",
+    "addOnsTitle": "POSSIBLE ADD ONS",
+    "exclusiveFeaturesTitle": "Exclusive Penguin Features",
+    "includedFeatures": [
+      "Full access to pre-match betting on all major sports",
+      "Full access to LIVE betting on all major sports",
+      "Premium casino slot games with high-quality graphics and performance",
+      "Exclusive access to private poker tables for a VIP experience",
+      "Live streaming of top sports events directly on the platform",
+      "24/7 dedicated agent support to assist with operations",
+      "24/7 wagering support for uninterrupted player activity",
+      "Private Telegram & WhatsApp group setup for agent support",
+      "Full access to agent management tools for total control and flexibility"
+    ],
+    "addOns": [
+      {
+        "name": "Prop Builder",
+        "description": "Add for $2 per head"
+      },
+      {
+        "name": "Live Casino (dealer games)",
+        "description": "Add for $1 per head"
+      },
+      {
+        "name": "Premium Horse Betting Platform",
+        "description": "Add for $2 per head"
+      }
+    ],
+    "penguinFeatures": [
+      {
+        "title": "All Main Sports"
+      },
+      {
+        "title": "Exclusive casinos Plinko/Pragmatic"
+      }
+    ]
+  },
+  "signup": {
+    "title": "Start Your",
+    "titleHighlight": "SPORTSBOOK",
+    "titleEnd": "Today",
+    "subtitle": "Join thousands of successful agents making money with our platform",
+    "form": {
+      "email": "Email Address",
+      "emailPlaceholder": "your@email.com",
+      "username": "Desired Agent Username",
+      "usernamePlaceholder": "agent_username",
+      "password": "Password",
+      "passwordPlaceholder": "••••••••",
+      "playerCount": "Estimated Number of Players",
+      "playerCountPlaceholder": "50",
+      "contactEmail": "Contact Email",
+      "contactEmailPlaceholder": "contact@email.com",
+      "phone": "Phone Number (Optional)",
+      "phonePlaceholder": "+1 (555) 123-4567",
+      "required": "*",
+      "submitButton": "START MY SPORTSBOOK BUSINESS NOW",
+      "successTitle": "Registration Submitted!",
+      "successMessage": "We'll contact you within 24 hours to set up your account."
+    }
   },
   "howItWorks": {
     "title": "What Is a Sportsbook Pay Per Head (PPH) Software?",

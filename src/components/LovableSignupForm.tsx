@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -8,6 +9,7 @@ import { Users } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const LovableSignupForm = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     email: "",
     username: "",
@@ -46,8 +48,8 @@ const LovableSignupForm = () => {
     window.location.href = mailtoLink;
 
     toast({
-      title: "Registration Submitted!",
-      description: "We'll contact you within 24 hours to set up your account.",
+      title: t('signup.form.successTitle'),
+      description: t('signup.form.successMessage'),
     });
     console.log("Form submitted:", formData);
   };
@@ -61,12 +63,12 @@ const LovableSignupForm = () => {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Start Your{" "}
-            <span className="text-green-400">SPORTSBOOK</span>{" "}
-            Today
+            {t('signup.title')}{" "}
+            <span className="text-green-400">{t('signup.titleHighlight')}</span>{" "}
+            {t('signup.titleEnd')}
           </h2>
           <p className="text-xl text-gray-300">
-            Join thousands of successful agents making money with our platform
+            {t('signup.subtitle')}
           </p>
         </div>
         
@@ -76,7 +78,7 @@ const LovableSignupForm = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="email" className="text-green-400 font-medium">
-                    Email Address *
+                    {t('signup.form.email')} {t('signup.form.required')}
                   </Label>
                   <Input
                     id="email"
@@ -85,13 +87,13 @@ const LovableSignupForm = () => {
                     value={formData.email}
                     onChange={(e) => handleInputChange("email", e.target.value)}
                     className="bg-gray-900/50 border-gray-600 focus:border-green-400 text-white"
-                    placeholder="your@email.com"
+                    placeholder={t('signup.form.emailPlaceholder')}
                   />
                 </div>
                 
                 <div className="space-y-2">
                   <Label htmlFor="username" className="text-green-400 font-medium">
-                    Desired Agent Username *
+                    {t('signup.form.username')} {t('signup.form.required')}
                   </Label>
                   <Input
                     id="username"
@@ -100,7 +102,7 @@ const LovableSignupForm = () => {
                     value={formData.username}
                     onChange={(e) => handleInputChange("username", e.target.value)}
                     className="bg-gray-900/50 border-gray-600 focus:border-green-400 text-white"
-                    placeholder="agent_username"
+                    placeholder={t('signup.form.usernamePlaceholder')}
                   />
                 </div>
               </div>
@@ -108,7 +110,7 @@ const LovableSignupForm = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="password" className="text-green-400 font-medium">
-                    Password *
+                    {t('signup.form.password')} {t('signup.form.required')}
                   </Label>
                   <Input
                     id="password"
@@ -117,13 +119,13 @@ const LovableSignupForm = () => {
                     value={formData.password}
                     onChange={(e) => handleInputChange("password", e.target.value)}
                     className="bg-gray-900/50 border-gray-600 focus:border-green-400 text-white"
-                    placeholder="••••••••"
+                    placeholder={t('signup.form.passwordPlaceholder')}
                   />
                 </div>
                 
                 <div className="space-y-2">
                   <Label htmlFor="playerCount" className="text-green-400 font-medium">
-                    Estimated Number of Players *
+                    {t('signup.form.playerCount')} {t('signup.form.required')}
                   </Label>
                   <Input
                     id="playerCount"
@@ -132,7 +134,7 @@ const LovableSignupForm = () => {
                     value={formData.playerCount}
                     onChange={(e) => handleInputChange("playerCount", e.target.value)}
                     className="bg-gray-900/50 border-gray-600 focus:border-green-400 text-white"
-                    placeholder="50"
+                    placeholder={t('signup.form.playerCountPlaceholder')}
                   />
                 </div>
               </div>
@@ -140,7 +142,7 @@ const LovableSignupForm = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="contactEmail" className="text-green-400 font-medium">
-                    Contact Email *
+                    {t('signup.form.contactEmail')} {t('signup.form.required')}
                   </Label>
                   <Input
                     id="contactEmail"
@@ -149,13 +151,13 @@ const LovableSignupForm = () => {
                     value={formData.contactEmail}
                     onChange={(e) => handleInputChange("contactEmail", e.target.value)}
                     className="bg-gray-900/50 border-gray-600 focus:border-green-400 text-white"
-                    placeholder="contact@email.com"
+                    placeholder={t('signup.form.contactEmailPlaceholder')}
                   />
                 </div>
                 
                 <div className="space-y-2">
                   <Label htmlFor="phone" className="text-green-400 font-medium">
-                    Phone Number (Optional)
+                    {t('signup.form.phone')}
                   </Label>
                   <Input
                     id="phone"
@@ -163,7 +165,7 @@ const LovableSignupForm = () => {
                     value={formData.phone}
                     onChange={(e) => handleInputChange("phone", e.target.value)}
                     className="bg-gray-900/50 border-gray-600 focus:border-green-400 text-white"
-                    placeholder="+1 (555) 123-4567"
+                    placeholder={t('signup.form.phonePlaceholder')}
                   />
                 </div>
               </div>
@@ -174,7 +176,7 @@ const LovableSignupForm = () => {
                   className="py-2 px-4 text-base sm:py-4 sm:px-8 sm:text-lg bg-gradient-to-r from-green-400 to-green-600 hover:from-green-500 hover:to-green-700 text-black font-bold transition-all duration-300 hover:scale-105 flex items-center whitespace-nowrap"
                 >
                   <Users className="w-5 h-5 mr-2 flex-shrink-0" />
-                  START MY SPORTSBOOK BUSINESS NOW
+                  {t('signup.form.submitButton')}
                 </Button>
               </div>
             </form>

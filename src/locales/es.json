@@ -7,8 +7,76 @@
     "signUp": "REGISTRARSE"
   },
   "hero": {
-    "title": "La plataforma PPH más competitiva de la industria",
-    "subtitle": "Inicia tu negocio de casa de apuestas hoy"
+    "title": "DESBLOQUEA EL MEJOR",
+    "titleHighlight": "DEAL PPH",
+    "titleEnd": "DE LA INDUSTRIA",
+    "priceLabel": "SOLO",
+    "price": "$7",
+    "priceDetails": "POR JUGADOR ACTIVO/SEMANA",
+    "subtitle": "Experimenta los precios más competitivos de la industria con características premium que te distinguen de la competencia."
+  },
+  "features": {
+    "title": "Todo Incluido por",
+    "price": "$7",
+    "addOnsTitle": "COMPLEMENTOS POSIBLES",
+    "exclusiveFeaturesTitle": "Características Exclusivas de Penguin",
+    "includedFeatures": [
+      "Acceso completo a apuestas pre-partido en todos los deportes principales",
+      "Acceso completo a apuestas EN VIVO en todos los deportes principales",
+      "Juegos de casino premium con gráficos de alta calidad y rendimiento",
+      "Acceso exclusivo a mesas de póker privadas para una experiencia VIP",
+      "Transmisión en vivo de eventos deportivos importantes directamente en la plataforma",
+      "Soporte dedicado de agente 24/7 para asistir con operaciones",
+      "Soporte de apuestas 24/7 para actividad ininterrumpida de jugadores",
+      "Configuración de grupo privado de Telegram y WhatsApp para soporte de agente",
+      "Acceso completo a herramientas de gestión de agente para control total y flexibilidad"
+    ],
+    "addOns": [
+      {
+        "name": "Constructor de Props",
+        "description": "Agregar por $2 por cabeza"
+      },
+      {
+        "name": "Casino en Vivo (juegos de dealer)",
+        "description": "Agregar por $1 por cabeza"
+      },
+      {
+        "name": "Plataforma Premium de Apuestas de Caballos",
+        "description": "Agregar por $2 por cabeza"
+      }
+    ],
+    "penguinFeatures": [
+      {
+        "title": "Todos los Deportes Principales"
+      },
+      {
+        "title": "Casinos Exclusivos Plinko/Pragmatic"
+      }
+    ]
+  },
+  "signup": {
+    "title": "Inicia Tu",
+    "titleHighlight": "CASA DE APUESTAS",
+    "titleEnd": "Hoy",
+    "subtitle": "Únete a miles de agentes exitosos que ganan dinero con nuestra plataforma",
+    "form": {
+      "email": "Dirección de Email",
+      "emailPlaceholder": "tu@email.com",
+      "username": "Nombre de Usuario de Agente Deseado",
+      "usernamePlaceholder": "usuario_agente",
+      "password": "Contraseña",
+      "passwordPlaceholder": "••••••••",
+      "playerCount": "Número Estimado de Jugadores",
+      "playerCountPlaceholder": "50",
+      "contactEmail": "Email de Contacto",
+      "contactEmailPlaceholder": "contacto@email.com",
+      "phone": "Número de Teléfono (Opcional)",
+      "phonePlaceholder": "+1 (555) 123-4567",
+      "required": "*",
+      "submitButton": "INICIAR MI NEGOCIO DE CASA DE APUESTAS AHORA",
+      "successTitle": "¡Registro Enviado!",
+      "successMessage": "Te contactaremos dentro de 24 horas para configurar tu cuenta."
+    }
   },
   "howItWorks": {
     "title": "¿Qué es un Software de Casa de Apuestas Pay Per Head (PPH)?",

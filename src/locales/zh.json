@@ -7,8 +7,76 @@
     "signUp": "注册"
   },
   "hero": {
-    "title": "业内最具竞争力的PPH平台",
-    "subtitle": "今天就开始您的体育博彩业务"
+    "title": "解锁业内最佳",
+    "titleHighlight": "PPH交易",
+    "titleEnd": "在这个行业",
+    "priceLabel": "仅需",
+    "price": "$7",
+    "priceDetails": "每个活跃玩家/周",
+    "subtitle": "体验业内最具竞争力的定价，拥有让您脱颖而出的高端功能。"
+  },
+  "features": {
+    "title": "所有功能仅需",
+    "price": "$7",
+    "addOnsTitle": "可能的附加功能",
+    "exclusiveFeaturesTitle": "企鹅专属功能",
+    "includedFeatures": [
+      "完全访问所有主要体育项目的赛前投注",
+      "完全访问所有主要体育项目的实时投注",
+      "具有高质量图形和性能的高级赌场老虎机游戏",
+      "独家访问私人扑克桌以获得VIP体验",
+      "直接在平台上观看顶级体育赛事直播",
+      "24/7专属代理支持协助运营",
+      "24/7投注支持确保不间断的玩家活动",
+      "私人Telegram和WhatsApp群组设置以获得代理支持",
+      "完全访问代理管理工具以获得完全控制和灵活性"
+    ],
+    "addOns": [
+      {
+        "name": "道具构建器",
+        "description": "每人增加$2"
+      },
+      {
+        "name": "真人赌场（荷官游戏）",
+        "description": "每人增加$1"
+      },
+      {
+        "name": "高级赛马投注平台",
+        "description": "每人增加$2"
+      }
+    ],
+    "penguinFeatures": [
+      {
+        "title": "所有主要体育项目"
+      },
+      {
+        "title": "独家赌场Plinko/Pragmatic"
+      }
+    ]
+  },
+  "signup": {
+    "title": "今天开始您的",
+    "titleHighlight": "体育博彩",
+    "titleEnd": "业务",
+    "subtitle": "加入数千名使用我们平台赚钱的成功代理",
+    "form": {
+      "email": "电子邮件地址",
+      "emailPlaceholder": "您的@email.com",
+      "username": "期望的代理用户名",
+      "usernamePlaceholder": "代理_用户名",
+      "password": "密码",
+      "passwordPlaceholder": "••••••••",
+      "playerCount": "预计玩家数量",
+      "playerCountPlaceholder": "50",
+      "contactEmail": "联系邮箱",
+      "contactEmailPlaceholder": "联系@email.com",
+      "phone": "电话号码（可选）",
+      "phonePlaceholder": "+1 (555) 123-4567",
+      "required": "*",
+      "submitButton": "立即开始我的体育博彩业务",
+      "successTitle": "注册已提交！",
+      "successMessage": "我们将在24小时内联系您设置您的账户。"
+    }
   },
   "howItWorks": {
     "title": "什么是体育博彩按人头付费(PPH)软件？",
